@@ -1,0 +1,2035 @@
+[
+  {
+    "model": "books.author",
+    "pk": 1,
+    "fields": {
+      "name": "Stephen King",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 1,
+    "fields": {
+      "title": "Works (Carrie / Night Shift / 'Salem's Lot / Shining)",
+      "description": "Contains:\r\n\r\n - [Carrie][4]\r\n - [Night Shift][3]\r\n - ['Salem's Lot][2]\r\n - [Shining][1]\r\n\r\n  [1]: https://openlibrary.org/works/OL81633W\r\n  [2]: https://openlibrary.org/works/OL81632W\r\n  [3]: https://openlibrary.org/works/OL81608W\r\n  [4]: https://openlibrary.org/works/OL81626W/Carrie",
+      "isbn": "9781555800130",
+      "authors": [
+        1
+      ],
+      "genre": "fiction",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1981-01-01",
+      "page_count": 992
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 2,
+    "fields": {
+      "title": "The Green Mile",
+      "description": "The Green Mile is a 1996 serial novel by American writer Stephen King. It tells the story of death row supervisor Paul Edgecombe's encounter with John Coffey, an unusual inmate who displays inexplicable healing and empathetic abilities. The serial novel was originally released in six volumes before being republished as a single-volume work. The book is an example of magical realism.\r\n\r\nThe Green Mile won the Bram Stoker Award for Best Novel in 1996. In 1997, The Green Mile was nominated as Best Novel for the British Fantasy Award and the Locus Award. In 2003 the book was listed on the BBC's The Big Read poll of the UK's \"best-loved novel\".\r\n\r\n\r\n----------\r\nContains:\r\n\r\n 1. [The Two Dead Girls](https://openlibrary.org/works/OL149165W/The_Two_Dead_Girls)\r\n 2. [The Mouse on the Mile](https://openlibrary.org/works/OL149147W/The_Mouse_on_the_Mile)\r\n 3. [Coffey's Hands](https://openlibrary.org/works/OL149107W/Coffey's_Hands)\r\n 4. [The Bad Death of Eduard Delacroix](https://openlibrary.org/works/OL15861106W/The_Bad_Death_of_Eduard_Delacroix)\r\n 5. [Night Journey](https://openlibrary.org/works/OL16252000W/Night_Journey)\r\n 6. [Coffey on the Mile](https://openlibrary.org/works/OL15136222W/Coffey_on_the_Mile)",
+      "isbn": "9024534062",
+      "authors": [
+        1
+      ],
+      "genre": "fiction",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1996-01-01",
+      "page_count": 465
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 3,
+    "fields": {
+      "title": "The Shining",
+      "description": "The Shining is a 1977 horror novel by American author Stephen King. It is King's third published novel and first hardback bestseller; its success firmly established King as a preeminent author in the horror genre. The setting and characters are influenced by King's personal experiences, including both his visit to The Stanley Hotel in 1974 and his struggle with alcoholism. The book was followed by a sequel, Doctor Sleep, published in 2013.\r\n\r\nThe Shining centers on the life of Jack Torrance, a struggling writer and recovering alcoholic who accepts a position as the off-season caretaker of the historic Overlook Hotel in the Colorado Rockies. His family accompanies him on this job, including his young son Danny Torrance, who possesses \"the shining\", an array of psychic abilities that allow Danny to see the hotel's horrific past. Soon, after a winter storm leaves them snowbound, the supernatural forces inhabiting the hotel influence Jack's sanity, leaving his wife and son in incredible danger.\r\n\r\n\r\n----------\r\nAlso contained in:\r\n\r\n - [Carrie / Night Shift / 'Salem's Lot / Shining](https://openlibrary.org/works/OL14917547W)\r\n - [Works (Danse Macabre / Salem's Lot / Shining)](https://openlibrary.org/works/OL24233994W)",
+      "isbn": "0385121679",
+      "authors": [
+        1
+      ],
+      "genre": "fiction",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1977-01-01",
+      "page_count": 506
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 4,
+    "fields": {
+      "title": "The Stand",
+      "description": "One man escapes from a biological weapon facility after an accident, carrying with him the deadly virus known as Captain Tripps, a rapidly mutating flu that - in the ensuing weeks - wipes out most of the world's population. In the aftermath, survivors choose between following an elderly black woman to Boulder or the dark man, Randall Flagg, who has set up his command post in Las Vegas. The two factions prepare for a confrontation between the forces of good and evil.\r\n([source][1])\r\n\r\n\r\n  [1]: https://stephenking.com/library/novel/stand_the.html",
+      "isbn": "9785170109401",
+      "authors": [
+        1
+      ],
+      "genre": "fiction",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1978-01-01",
+      "page_count": 1153
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 5,
+    "fields": {
+      "title": "It",
+      "description": "\"*It*\" is a 1986 horror novel by American author Stephen King. \"*It*\" was his 22nd book and his 17th novel written under his own name. The story follows the experiences of seven children as they are terrorized by an evil entity that exploits the fears of its victims to disguise itself while hunting its prey. \"*It*\" primarily appears in the form of Pennywise the Dancing Clown to attract its preferred prey of young children.\r\n\r\nThe novel won the British Fantasy Award in 1987, and received nominations for the Locus and World Fantasy Awards that same year.\r\n\r\nIn 2003, \"*It*\" was listed at number 144 on the BBC's The Big Read poll.\r\n\r\n\r\n\r\n\r\n----------\r\nSee also:\r\n\r\n - [IT 1/2][2]\r\n - [IT 2/2][3]\r\n\r\n\r\n  [1]: https://www.stephenking.com/library/novel/it.html\r\n  [2]: https://openlibrary.org/works/OL14916816W/It_1_2\r\n  [3]: https://openlibrary.org/works/OL14916818W/It_2_2",
+      "isbn": "1587672707",
+      "authors": [
+        1
+      ],
+      "genre": "fiction",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1986-01-01",
+      "page_count": 1168
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 6,
+    "fields": {
+      "title": "The Drawing of the Three",
+      "description": "[The Dark Tower][1] II\r\n\r\nPart II of an epic saga. Roland, the last gunslinger, encounters three mysterious doorways on the beach. Each one enters into a different person living in New York. Through these doorways, Roland draws the companions who will assist him on his quest to save the Dark Tower. \r\n([source][2])\r\n\r\n\r\n  [1]: https://openlibrary.org/works/OL81600W/The_Dark_Tower_1-7\r\n  [2]: https://stephenking.com/library/novel/dark_tower_the_drawing_of_the_three_the.html",
+      "isbn": "0937986917",
+      "authors": [
+        1
+      ],
+      "genre": "fiction",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1987-01-01",
+      "page_count": 455
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 7,
+    "fields": {
+      "title": "Misery",
+      "description": "Novelist Paul Sheldon has plans to make the difficult transition from writing historical romances featuring heroine Misery Chastain to publishing literary fiction. Annie Wilkes, Sheldon's number one fan, rescues the author from the scene of a car accident. The former nurse takes care of him in her remote house, but becomes irate when she discovers that the author has killed Misery off in his latest book. Annie keeps Sheldon prisoner while forcing him to write a book that brings Misery back to life.\r\n\r\n[Source][1]\r\n\r\n\r\n  [1]: https://stephenking.com/library/novel/misery.html",
+      "isbn": "9788401498947",
+      "authors": [
+        1
+      ],
+      "genre": "fiction",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1978-01-01",
+      "page_count": 382
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 8,
+    "fields": {
+      "title": "Wolves of the Calla",
+      "description": "[The Dark Tower][1] V\r\n\r\nAfter escaping the perilous wreckage of Blaine the insane Mono and eluding the evil clutches of the vindictive sorcerer Randall Flagg, Roland and his ka-tet find themselves back on the southeasterly path of the Beam. Here, in the borderlands that lie between Mid-World and End-World, Roland and his friends are approached by a frightened band of representatives from the nearby town of Calla Bryn Sturgis. In less than a month, the Calla will be attacked by the Wolves--those masked riders that gallop out of Thunderclap once a generation to steal the town's children. The Calla folken need the kind of help that only gunslingers can give, and if the tet agrees to help, the town's priest--Father Callahan, once of 'Salem's Lot, Maine--promises to give them Black Thirteen, the most potent and treacherous of Maerlyn's magic balls. He used it to enter Mid-World, and now it sleeps fitfully beneath the floorboards of his church. Meanwhile, in the New York of 1977, the Sombra Corporation plots to destroy the lot at Second Avenue and Forty-Sixth Street. How can Roland and his friends both save the rose and fight the Wolves? Only by using the magic of Black Thirteen, but how can anyone trust this sinister and treacherous object which is, in actuality, the eye of the Crimson King himself? Time is running out on all levels of the Tower, but unless our ka-tet can defeat the minions of Thunderclap both in our world and in Mid-World, they will never reach that great lynchpin of the time/space continuum which, even now, begins to totter . . .\r\n([source][2])\r\n\r\n\r\n  [1]: https://openlibrary.org/works/OL81600W/The_Dark_Tower_1-7\r\n  [2]: https://stephenking.com/library/novel/dark_tower_wolves_of_the_calla_the.html",
+      "isbn": "8379855876",
+      "authors": [
+        1
+      ],
+      "genre": "fiction",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2003-01-01",
+      "page_count": 714
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 9,
+    "fields": {
+      "title": "A Torre Negra",
+      "description": "Junto com Roland estão dois companheiros que ele levou consigo para esse universo: Eddie Dean, um ex-dependente químico, e Susannah, nova identidade da mulher que combina no mesmo corpo duas personalidades distintas. À sua frente estão as extraordinárias revelações sobre quem ele é e o que motiva sua busca. E contra Roland se perfila uma legião cada vez mais numerosa de inimigos, humanos ou não. À medida que o ritmo da ação, da descoberta e do perigo se acelera, o leitor é irremediavelmente absorvido por um drama espetacular, ao mesmo tempo assustador como um pesadelo... e estranhamente familiar.",
+      "isbn": "3453053397",
+      "authors": [
+        1
+      ],
+      "genre": "fiction",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1991-01-01",
+      "page_count": 563
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 10,
+    "fields": {
+      "title": "Song of Susannah",
+      "description": "[The Dark Tower][1] VI\r\n\r\nSusannah, now pregnant, has yet another taking control of her.  The demon-mother, Mia, uses Susannah and Black Thirteen to transport to New York City of 1999.  Jake, Oy, and Pere Callahan must rescue Susannah while Eddie and Roland transport to the Maine of 1977.  A vacant lot in New York is the prize that must be saved and ties these together.\r\n([source][2])\r\n\r\n\r\n  [1]: https://openlibrary.org/works/OL81600W/The_Dark_Tower_1-7\r\n  [2]: https://www.stephenking.com/library/novel/dark_tower_song_of_susannah_the.html",
+      "isbn": "1508219176",
+      "authors": [
+        1
+      ],
+      "genre": "fiction",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1999-01-01",
+      "page_count": 463
+    }
+  },
+  {
+    "model": "books.author",
+    "pk": 2,
+    "fields": {
+      "name": "Lois McMaster Bujold",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 11,
+    "fields": {
+      "title": "Shards of Honor",
+      "description": "",
+      "isbn": "9781476781105",
+      "authors": [
+        2
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1986-01-01",
+      "page_count": 272
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 12,
+    "fields": {
+      "title": "The Curse of Chalion",
+      "description": "A man broken in body and spirit, Cazaril has returned to the noble household he once served as page, and is named, to his great surprise, secretary-tutor to the beautiful, strong-willed sister of the impetuous boy who is next in line to rule. It is as assignment Cazaril dreads, for it must ultimately lead him to the place he most fears: the royal court of Cardegoss, where the powerful enemies who once placed him in chains now occupy lofty positions. but it is more than the traitorous intrigues of villains that threaten Cazaril and the Royesse Iselle here, for a sinister curse hangs like a sword over the entire blighted House of Chalion and all who stand in their circle. And only by employing the darkest, most forbidden of magics can Cazaril hope to protect his royal charge -- an act that will mark the loyal, damaged servant as a tool of the miraculous ... and trap him, flesh and soul, in a maze of demonic paradox, damnation, and death.",
+      "isbn": "9780786185986",
+      "authors": [
+        2
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1991-01-01",
+      "page_count": 442
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 13,
+    "fields": {
+      "title": "Memory",
+      "description": "A disgraced space hero gets a second chance. Miles Vorkosigan lied about the state of his health and is dismissed from service by his superior. But when his superior falls mentally ill and starts making mistakes it is to Miles he turns for help. By the author of Mirror Dance.",
+      "isbn": "9780671878450",
+      "authors": [
+        2
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1996-01-01",
+      "page_count": 462
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 14,
+    "fields": {
+      "title": "The Warrior Apprentice",
+      "description": "",
+      "isbn": "9780786176915",
+      "authors": [
+        2
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1986-01-01",
+      "page_count": 315
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 15,
+    "fields": {
+      "title": "Paladin of Souls",
+      "description": "E-Book Extras: ONE: The Keys to Chalion: A Dictionary of People, Places, and Things; TWO: Chalion MiscellanyIt's been three years since the curse was lifted, but Ista dy Baocia, Dowager Royina of Chalion, holds a dark secret: she was responsible for the destruction of Chalion years ago. When her kingdom is threatened once again, Ista must defend her homeland, and her soul.One of the most honored authors in the field of fantasy and science fiction, Lois McMaster Bujold transports us once more to a dark and troubled land and embroils us in a desperate struggle to preserve the endangered souls of a realm.Three years have passed since the widowed Dowager Royina Ista found release from the curse of madness that kept her imprisoned in her family's castle of Valenda. Her newfound freedom is costly, bittersweet with memories, regrets, and guilty secrets -- for she knows the truth of what brought her land to the brink of destruction. And now the road -- escape -- beckons. . . . A simple pilgrimage, perhaps. Quite fitting for the Dowager Royina of all Chalion.Yet something else is free, too -- something beyond deadly. To the north lies the vital border fortress of Porifors. Memories linger there as well, of wars and invasions and the mighty Golden General of Jokona. And someone, something, watches from across that border -- humans, demons, gods.Ista thinks her little party of pilgrims wanders at will. But whose? When Ista's retinue is unexpectedly set upon not long into its travels, a mysterious ally appears -- a warrior nobleman who fights like a berserker. The temporary safety of her enigmatic champion's castle cannot ease Ista's mounting dread, however, when she finds his dark secrets are entangled with hers in a net of the gods' own weaving.In her dreams the threads are already drawing her to unforeseen chances, fateful meetings, fearsome choices. What the inscrutable gods commanded of her in the past brought her land to the brink of devastation. Now, once again, they have chosen Ista as their instrument. And again, for good or for ill, she must comply.",
+      "isbn": "0060767839",
+      "authors": [
+        2
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2003-01-01",
+      "page_count": 436
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 16,
+    "fields": {
+      "title": "Mirror Dance",
+      "description": "Mark Vorkosigan hijacks a ship of the Dendarii Mercenaries and flies to the outlaw planet, Jackson's Whole, to destroy the clone creches where he was raised. The mission goes wrong and Miles, his host clonebrother, has to mount a rescue.\n\n\"Not everyone would envy young Lord Miles Naismith Vorkosigan, even though he had formed his own mercenary fleet before attending the naval academy, and even though his mother was the beautiful Cordelia, the ship captain who has taught the Lords of Barrayar much about the perils of sexism. Even the fact that Miles is third in line to the throne and personally owns a major chunk of his home planet would not tempt any normal person to change places with him. When assassins came to rid the world of his father, his mother, pregnant with Miles, was in the line of fire, and Miles was but an egg for the omelet in an all too literal sense. Thanks to heroic medical intervention, Miles survived his near fatal brush with war gas--as a pain-filled dwarf with bones as weak and brittle as some malign composite of chalk and glass. Miles is often mistaken for a mutant by his mutant loathing countrymen. But there is one who does envy him, who wants to be him: his brother, his cloned stranger formed from tissue stolen from Miles when he was a child. For Mark Vorkosigan was created and raised up for only one purpose: to become Miles, to murder and replace him. In Brothers in Arms that conspiracy was routed and Mark made more or less compliant to his new Miles-less fate. But in the intervening years Mark has learned that without Miles he is... nothing. The new and better Mark doesn't really want to kill his brother, but still it may come to that: Mark to stay, Miles to go...\" --Publisher's description.",
+      "isbn": "9783453126701",
+      "authors": [
+        2
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1994-01-01",
+      "page_count": 392
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 17,
+    "fields": {
+      "title": "The Vor Game",
+      "description": "",
+      "isbn": "078613660X",
+      "authors": [
+        2
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1990-01-01",
+      "page_count": 350
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 18,
+    "fields": {
+      "title": "Komarr",
+      "description": "Agent Miles Vorkosigan investigates terrorism and financial speculation on the planet Komarr. The story is told through the eyes of Ekaterin, the unhappily married wife of a government official with whom Vorkosigan falls in love.",
+      "isbn": "1470848104",
+      "authors": [
+        2
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1998-01-01",
+      "page_count": 311
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 19,
+    "fields": {
+      "title": "Barrayar",
+      "description": "Sequel to \"Shards of Honor\". The two were later published together under the title \"Cordelia's Honor\".",
+      "isbn": "9786069351024",
+      "authors": [
+        2
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1991-01-01",
+      "page_count": 389
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 20,
+    "fields": {
+      "title": "A Civil Campaign",
+      "description": "Miles Vorkosigan launches a campaign to win the heart of Ekatarina, whose former husband died as a result of Miles' investigations in the book *Komarr*,  by the same author.  As a member of the Vor class, Miles and Ekatarina are constrained by many social strictures. Because Miles is politically important, he and his actions are under close scrutiny and subject to various forms of political and social attack. The book is a comedy of manners, very well done so that we seldom look up and wonder why the characters don't just cut to the chase.",
+      "isbn": "9781433207105",
+      "authors": [
+        2
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1999-01-01",
+      "page_count": 416
+    }
+  },
+  {
+    "model": "books.author",
+    "pk": 3,
+    "fields": {
+      "name": "Robert Jordan",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.author",
+    "pk": 4,
+    "fields": {
+      "name": "Brandon Sanderson",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 21,
+    "fields": {
+      "title": "The Gathering Storm",
+      "description": "Rand al'Thor, the Dragon Reborn, struggles to unite a fractured network of kingdoms and alliances in preparation for the Last Battle. Meanwhile, Egwene al'Vere, the Amyrlin Seat of the rebel Aes Sedai, is being held captive by the White Tower. Knowing the Seanchan attack is imminent, she fights to hold the Aes Sedai together in an epic contest that will prove the mettle of her followers and will decide the future of the White Tower---and possibly the world itself. The first of three novels that will make up \"A Memory of Light\" and mark the conclusion of the Wheel of Time.",
+      "isbn": "1429960833",
+      "authors": [
+        3,
+        4,
+        3
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2009-01-01",
+      "page_count": 824
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 22,
+    "fields": {
+      "title": "The Shadow Rising",
+      "description": "The Wheel of Time turns and Ages come and go, leaving memories that become legend. Legend fades to myth, and even myth is long forgotten when the Age that gave it birth returns again. In the Third Age, an Age of Prophecy, the World and Time themselves hang in the balance. What was, what will be, and what is, may yet fall under the Shadow.\r\nThe seals of Shayol Ghul are weak now, and the Dark One reaches out. The Shadow is rising to cover humankind.\r\nIn Tar Valon, Min sees portents of hideous doom. Will the White Tower itself be broken?\r\nIn the Two Rivers, the Whitecloaks ride in pursuit of a man with golden eyes, and in pursuit of the Dragon Reborn.\r\nIn Cantorin, among the Sea Folk, High Lady Suroth plans the return of the Seanchan armies to the mainland.\r\nIn the Stone of Tear, the Lord Dragon considers his next move. It will be something no one expects, not the Black Ajah, not Tairen nobles, not Aes Sedai, not Egwene or Elayne or Nynaeve.\r\nAgainst the Shadow rising stands the Dragon Reborn...",
+      "isbn": "9781429960199",
+      "authors": [
+        3
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1992-01-01",
+      "page_count": 960
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 23,
+    "fields": {
+      "title": "The Great Hunt (The Wheel of Time Book 2)",
+      "description": "Now in development for TV!\r\n\r\nSince its debut in 1990, The Wheel of Time® by Robert Jordan has captivated millions of readers around the globe with its scope, originality, and compelling characters.\r\n\r\nThe Wheel of Time turns and Ages come and go, leaving memories that become legend. Legend fades to myth, and even myth is long forgotten when the Age that gave it birth returns again. In the Third Age, an Age of Prophecy, the World and Time themselves hang in the balance. What was, what will be, and what is, may yet fall under the Shadow.\r\n\r\nFor centuries, gleemen have told the tales of The Great Hunt of the Horn. So many tales about each of th Hunters, and so many Hunters to tell of...Now the Horn itself is found: the Horn of Valere long thought only legend, the Horn which will raise the dead heroes of the ages. And it is stolen.\r\n\r\nTV series update: \"Sony will produce along with Red Eagle Entertainment and Radar Pictures. Rafe Judkins is attached to write and executive produce. Judkins previously worked on shows such as ABC’s “Agents of SHIELD,” the Netflix series “Hemlock Grove,” and the NBC series “Chuck.” Red Eagle partners Rick Selvage and Larry Mondragon will executive produce along with Radar’s Ted Field and Mike Weber. Darren Lemke will also executive produce, with Jordan’s widow Harriet McDougal serving as consulting producer.\" —*Variety*\r\n\r\nThe Wheel of Time**®**\r\nNew Spring: The Novel\r\n#1 The Eye of the World\r\n#2 The Great Hunt\r\n#3 The Dragon Reborn\r\n#4 The Shadow Rising\r\n#5 The Fires of Heaven\r\n#6 Lord of Chaos\r\n#7 A Crown of Swords\r\n#8 The Path of Daggers\r\n#9 Winter's Heart\r\n#10 Crossroads of Twilight\r\n#11 Knife of Dreams\r\n\r\nBy Robert Jordan and Brandon Sanderson\r\n#12 The Gathering Storm\r\n#13 Towers of Midnight\r\n#14 A Memory of Light",
+      "isbn": "9780812517729",
+      "authors": [
+        3
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1990-01-01",
+      "page_count": 672
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 24,
+    "fields": {
+      "title": "The Eye of the World",
+      "description": "The Wheel of Time turns and Ages come and go, leaving memories that become legend. Legend fades to myth, and even myth is long forgotten when the Age that gave it birth returns again. In the Third Age, an Age of Prophecy, the World and Time themselves hang in the balance. What was, what will be, and what is, may yet fall under the Shadow.",
+      "isbn": "9781250832375",
+      "authors": [
+        3
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1990-01-01",
+      "page_count": 782
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 25,
+    "fields": {
+      "title": "Knife of Dreams",
+      "description": "In een gefantaseerde wereld maakt een ieder zich op voor de laatste strijd tussen Goed en Kwaad.",
+      "isbn": "1435257901",
+      "authors": [
+        3
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2005-01-01",
+      "page_count": 832
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 26,
+    "fields": {
+      "title": "Lord of Chaos",
+      "description": "The Wheel of Time turns and Ages come and go, leaving memories that become legend. Legend fades to myth, and even myth is long forgotten when the Age that gave it birth returns again. In the Third Age, an Age of Prophecy, the World and Time themselves hang in the balance. What was, what will be, and what is, may yet fall under the Shadow.\r\n\r\nOn the slopes of Shayol Ghul, the Myrddraal swords are forged, and the sky is not the sky of this world;\r\n\r\nIn Salidar the White Tower in exile prepares an embassy to Caemlyn, where Rand Al'Thor, the Dragon Reborn, holds the throne--and where an unexpected visitor may change the world....\r\n\r\nIn Emond's Field, Perrin Goldeneyes, Lord of the Two Rivers, feels the pull of ta'veren to ta'veren and prepares to march...\r\n\r\nMorgase of Caemlyn finds a most unexpected, and quite unwelcome, ally....And south lies Illian, where Sammael holds sway...\r\n\r\nTV series update: \"Sony will produce along with Red Eagle Entertainment and Radar Pictures. Rafe Judkins is attached to write and executive produce. Judkins previously worked on shows such as ABC’s “Agents of SHIELD,” the Netflix series “Hemlock Grove,” and the NBC series “Chuck.” Red Eagle partners Rick Selvage and Larry Mondragon will executive produce along with Radar’s Ted Field and Mike Weber. Darren Lemke will also executive produce, with Jordan’s widow Harriet McDougal serving as consulting producer.\" —*Variety*\r\n\r\nThe Wheel of Time**®**\r\nNew Spring: The Novel\r\n#1 The Eye of the World\r\n#2 The Great Hunt\r\n#3 The Dragon Reborn\r\n#4 The Shadow Rising\r\n#5 The Fires of Heaven\r\n#6 Lord of Chaos\r\n#7 A Crown of Swords\r\n#8 The Path of Daggers\r\n#9 Winter's Heart\r\n#10 Crossroads of Twilight\r\n#11 Knife of Dreams\r\n\r\nBy Robert Jordan and Brandon Sanderson\r\n#12 The Gathering Storm\r\n#13 Towers of Midnight\r\n#14 A Memory of Light",
+      "isbn": "9780356517056",
+      "authors": [
+        3
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1994-01-01",
+      "page_count": 921
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 27,
+    "fields": {
+      "title": "Towers of Midnight",
+      "description": "As the seals on the Dark One's prison crumble and the armies of the Shadow boil out of the Blight, Perrin Aybara, hunted by specters from his past, must seek answers in \"Tel'aran'rhiod\" and find a way to master the wolf within him--or lose himself to it forever. Meanwhile, Matrim Cauthon prepares for the most difficult challenge of his life ... as The Tower of Ghenjei awaits.",
+      "isbn": "9783492707237",
+      "authors": [
+        3,
+        4
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2010-01-01",
+      "page_count": 944
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 28,
+    "fields": {
+      "title": "The Fires of Heaven",
+      "description": "The bonds and wards that hold the Great Lord of the Dark are slowly failing, but still his fragile prison holds. The Forsaken, immortal servants of the shadow, weave their snares and tighten their grip upon the realms of men, sure in the knowledge that their master will soon break free...\r\nRand al' Thor, the Dragon Reborn, knows that he must strike at the Enemy, but his forces are divided by treachery and by ambition. Even the Aes Sedai, ancient guardians of the Light, are riven by civil war. Betrayed by his allies, pursued by his enemies and beset by the madness that comes to the male wielders of the One Power, Rand rides out to meet the foe.",
+      "isbn": "9781429960373",
+      "authors": [
+        3
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1993-01-01",
+      "page_count": 894
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 29,
+    "fields": {
+      "title": "New Spring (The Wheel of Time, Book 0)",
+      "description": "Since its debut in 1990, The Wheel of Time® by Robert Jordan has captivated millions of readers around the globe with its scope, originality, and compelling characters.\r\n\r\nThe Wheel of Time turns and Ages come and go, leaving memories that become legend. Legend fades to myth, and even myth is long forgotten when the Age that gave it birth returns again. In the Third Age, an Age of Prophecy, the World and Time themselves hang in the balance. What was, what will be, and what is, may yet fall under the Shadow.\r\n\r\nFor three days battle has raged in the snow around the great city of Tar Valon. In the city, a Foretelling of the future is uttered. On the slopes of Dragonmount, the immense mountain that looms over the city, is born an infant prophesied to change the world. That child must be found before the forces of the Shadow have an opportunity to kill him.\r\n\r\nMoiraine Damodred, a young Accepted soon to be raised to Aes Sedai, and Lan Mandragoran, a soldier fighting in the battle, are set on paths that will bind their lives together. But those paths are filled with complications and dangers, for Moiraine, of the Royal House of Cairhien, whose king has just died, and Lan, considered the uncrowned king of a nation long dead, find their lives threatened by the plots of those seeking power.\r\n\r\n\"New Spring\" related some of these events, in compressed form; New Spring: The Novel tells the whole story.",
+      "isbn": "0765309262",
+      "authors": [
+        3
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2004-01-01",
+      "page_count": 336
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 30,
+    "fields": {
+      "title": "Winter's Heart",
+      "description": "All I can say is this is yet another great chapter in the wheel of time.  A must for the fans. A  new people called The Kin are introduced.  Mat might meet his other wife in this story!",
+      "isbn": "9788445007082",
+      "authors": [
+        3
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2000-01-01",
+      "page_count": 668
+    }
+  },
+  {
+    "model": "books.author",
+    "pk": 5,
+    "fields": {
+      "name": "J.R.R. Tolkien",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 31,
+    "fields": {
+      "title": "The Lord of the Rings",
+      "description": "Originally published from 1954 through 1956, J.R.R. Tolkien's richly complex series ushered in a new age of epic adventure storytelling. A philologist and illustrator who took inspiration from his work, Tolkien invented the modern heroic quest novel from the ground up, creating not just a world, but a domain, not just a lexicon, but a language, that would spawn countless imitators and lead to the inception of the epic fantasy genre. Today, THE LORD OF THE RINGS is considered \"the most influential fantasy novel ever written.\" (THE ENCYCLOPEDIA OF FANTASY)\r\n\r\nDuring his travels across Middle-earth, the hobbit Bilbo Baggins had found the Ring. But the simple band of gold was far from ordinary; it was in fact the One Ring - the greatest of the ancient Rings of Power. Sauron, the Dark Lord, had infused it with his own evil magic, and when it was lost, he was forced to flee into hiding.\r\n\r\nBut now Sauron's exile has ended and his power is spreading anew, fueled by the knowledge that his treasure has been found. He has gathered all the Great Rings to him, and will stop at nothing to reclaim the One that will complete his dominion. The only way to stop him is to cast the Ruling Ring deep into the Fire-Mountain at the heart of the land of Mordor--Sauron's dark realm.\r\n\r\nFate has placed the burden in the hands of Frodo Baggins, Bilbo's heir...and he is resolved to bear it to its end. Or his own. \r\n\r\n\r\n----------\r\n\r\n\r\n**Contains**\r\n\r\n - [The Fellowship of the Ring][1]\r\n - [The Two Towers][2]\r\n - [The Return of the King][3]\r\n - [The Lord of the Rings [2/2]](https://openlibrary.org/works/OL27306128W)\r\n - [The Lord of the Rings [1/6]](https://openlibrary.org/works/OL24170898W)\r\n - [The Lord of the Rings [1/9]](https://openlibrary.org/works/OL27305953W)\r\n - [The Lord of the Rings [2/9]](https://openlibrary.org/works/OL27305892W)\r\n - [The Lord of the Rings [3/9]](https://openlibrary.org/works/OL27306048W)\r\n\r\n\r\n\r\n  [1]: https://openlibrary.org/works/OL14933414W/The_Fellowship_of_the_Ring\r\n  [2]: https://openlibrary.org/works/OL27479W/The_Two_Towers\r\n  [3]: https://openlibrary.org/works/OL27516W/The_Return_of_the_King",
+      "isbn": "9784566023673",
+      "authors": [
+        5
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1954-01-01",
+      "page_count": 1193
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 32,
+    "fields": {
+      "title": "The Fellowship of the Ring",
+      "description": "One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them.\r\n\r\n“A unique, wholly realized other world, evoked from deep in the well of Time, massively detailed, absorbingly entertaining, profound in meaning.”—The New York Times\r\n\r\nIn ancient times the Rings of Power were crafted by the Elven-smiths, and Sauron, the Dark Lord, forged the One Ring, filling it with his own power so that he could rule all others. But the One Ring was taken from him, and though he sought it throughout Middle-earth, it remained lost to him. After many ages it fell into the hands of Bilbo Baggins, as told in The Hobbit. In a sleepy village in the Shire, young Frodo Baggins finds himself faced with an immense task, as his elderly cousin Bilbo entrusts the Ring to his care. Frodo must leave his home and make a perilous journey across Middle-earth to the Cracks of Doom, there to destroy the Ring and foil the Dark Lord in his evil purpose.",
+      "isbn": "0007203586",
+      "authors": [
+        5
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1954-01-01",
+      "page_count": 496
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 33,
+    "fields": {
+      "title": "The Two Towers",
+      "description": "The Lord of the Rings, J.R.R. Tolkien's three-volume epic, is set in the imaginary world of Middle-earth -- home to many strange beings, and most notably hobbits, a peace-loving \"little people,\" cheerful and shy. Since its original British publication in 1954-55, the saga has entranced readers of all ages. It is at once a classic myth and a modern fairy tale. Critic Michael Straight has hailed it as one of the \"very few works of genius in recent literature.\" Middle-earth is a world receptive to poets, scholars, children, and all other people of good will. Donald Barr has described it as \"a scrubbed morning world, and a ringing nightmare world...especially sunlit, and shadowed by perils very fundamental, of a peculiarly uncompounded darkness.\" The story of this world is one of high and heroic adventure. Barr compared it to Beowulf, C.S. Lewis to Orlando Furioso, W.H. Auden to The Thirty-nine Steps. In fact the saga is sui generis -- a triumph of imagination which springs to life within its own framework and on its own terms. - Jacket flap.\r\n\r\nFrodo and the Companions of the Ring have been beset by danger during their quest to prevent the Ruling Ring from falling into the hands of the Dark Lord by destroying it in the Cracks of Doom. They have lost the wizard, Gandalf, in the battle with an evil spirit in the Mines of Moria; and at the Falls of Rauros, Boromir, seduced by the power of the Ring, tried to seize it by force. While Frodo and Sam made their escape the rest of the company were attacked by Orcs. Now they continue their journey alone down the great River Anduin – alone, that is, save for the mysterious creeping figure that follows wherever they go. J.R.R. Tolkien’s great work of imaginative fiction has been labelled both a heroic romance and a classic fantasy fiction. By turns comic and homely, epic and diabolic, the narrative moves through countless changes of scene and character in an imaginary world which is totally convincing in its detail.\r\n\r\n----------\r\n**Also contained in:**\r\n\r\n - [The Lord of the Rings][1]\r\n\r\n\r\n  [1]: https://openlibrary.org/works/OL27448W/The_Lord_of_the_Rings",
+      "isbn": "9781484490334",
+      "authors": [
+        5
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1954-01-01",
+      "page_count": 436
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 34,
+    "fields": {
+      "title": "The Return of the King",
+      "description": "THE RETURN OF THE KING, which brings to a close the great epic of war and adventure begun in The Fellowship of the Ring and continued in The Two Towers, is the third and final part of J. R. R. Tolkien's masterpiece, \"The Lord of the Rings.\"\r\n\r\nIn these three books, which form one continuous narrative, Tolkien created the saga of the Hobbits of Middle-earth and the great War of the Rings. Praised by such writers and poets as W. H. Auden, Richard Hughes and C. S. Lewis, \"The Lord of the Rings\" - that special world of beauty and terror and meaning - holds a secure place among the books that will live.\r\n\r\n----------\r\n**Also contained in:**\r\n\r\n - [The Lord of the Rings][1]\r\n\r\n\r\n  [1]: https://openlibrary.org/works/OL27448W/The_Lord_of_the_Rings",
+      "isbn": "2266046519",
+      "authors": [
+        5
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1950-01-01",
+      "page_count": 505
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 35,
+    "fields": {
+      "title": "The Hobbit",
+      "description": "The Hobbit is a tale of high adventure, undertaken by a company of dwarves in search of dragon-guarded gold. A reluctant partner in this perilous quest is Bilbo Baggins, a comfort-loving unambitious hobbit, who surprises even himself by his resourcefulness and skill as a burglar.\r\n\r\nEncounters with trolls, goblins, dwarves, elves, and giant spiders, conversations with the dragon, Smaug, and a rather unwilling presence at the Battle of Five Armies are just some of the adventures that befall Bilbo.\r\n\r\nBilbo Baggins has taken his place among the ranks of the immortals of children’s fiction. Written by Professor Tolkien for his children, The Hobbit met with instant critical acclaim when published.",
+      "isbn": "8020702628",
+      "authors": [
+        5
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1937-01-01",
+      "page_count": 310
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 36,
+    "fields": {
+      "title": "Novels (Hobbit / Lord of the Rings)",
+      "description": "Contains:\r\n\r\n - [Hobbit](https://openlibrary.org/works/OL262758W)\r\n - [The Fellowship of the Ring][1]\r\n - [The Two Towers][2]\r\n - [The Return of the King][3]\r\n\r\n  [1]: https://openlibrary.org/works/OL15331214W/The_Fellowship_of_the_Ring\r\n  [2]: https://openlibrary.org/works/OL262757W/The_Two_Towers\r\n  [3]: https://openlibrary.org/works/OL27516W/The_Return_of_the_King",
+      "isbn": "853361568X",
+      "authors": [
+        5
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1979-01-01",
+      "page_count": 1601
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 37,
+    "fields": {
+      "title": "The Silmarillion",
+      "description": "A number-one New York Times bestseller when it was originally published, The Silmarillion is the core of J.R.R. Tolkien's imaginative writing, a work whose origins stretch back to a time long before The Hobbit.",
+      "isbn": "9789703702008",
+      "authors": [
+        5
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1977-01-01",
+      "page_count": 428
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 38,
+    "fields": {
+      "title": "The Children of Húrin",
+      "description": "The ‘Great Tale’ of The Children of Húrin, set during the legendary time before The Lord of the Rings. Morgoth, the first Dark Lord, dwells in the vast fortress of Angband in the North; and within the shadow of the fear of Angband, and the war waged by Morgoth against the Elves, the fates of Turin and his sister Nienor will be tragically entwined. Their brief and passionate lives are dominated by the elemental hatred that Morgoth bears them as the children of Hurin, the man who dared to defy him to his face. Against them Morgoth sends his most formidable servant, Glaurung, a powerful spirit in the form of a huge wingless dragon of fire. Sardonic and mocking, Glaurung manipulates the fates of Turin and Nienor by lies of diabolic cunning and guile, in an attempt to fulfil the curse of Morgoth.",
+      "isbn": "0061917613",
+      "authors": [
+        5
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2001-01-01",
+      "page_count": 313
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 39,
+    "fields": {
+      "title": "Unfinished Tales of Númenor and Middle-earth",
+      "description": "Unfinished Tales is a collection of narratives ranging in time from the Elder Days of Middle-earth to the end of the War of the Ring, and provides those who have read The Lord of the Rings with a whole collection of background and new stories from the twentieth century’s most acclaimed popular author.\r\n\r\nThe book concentrates on the realm of Middle-earth and comprises such elements as Gandalf’s lively account of how it was that he came to send the Dwarves to the celebrated party at Bag-End, the emergence of the sea-god Ulmo before the eyes of Tuor on the coast of Beleriand, and an exact description of the military organization of the Riders of Rohan.\r\n\r\nUnfinished Tales also contains the only story about the long ages of Numenor before its downfall, and all that is known about such matters as the Five Wizards, the Palantiri and the legend of Amroth. The tales were collated and edited by JRR Tolkien’s son and literary heir, Christopher Tolkien, who provides a short commentary on each story, helping the reader to fill in the gaps and put each story into the context of the rest of his father’s writings.",
+      "isbn": "9789547332171",
+      "authors": [
+        5
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1980-01-01",
+      "page_count": 512
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 40,
+    "fields": {
+      "title": "The Book of Lost Tales [1/2]",
+      "description": "The story begins with a man named Eriol, as he lands on the 'Lonely Island' mythical prehistory England. While traveling he stops at the \"Cottage of Lost Play\" a house owned by Lindo and Vairë elves. They tell him how they came to be there, and of a place called the 'Cottage of Children', a place where Children that had gotten lost in the woods could stay. Its caretaker left and the cottage was rediscovered by Lindo's father, and he took the children to this island, with him, and now Lindo looks after them.\r\n\r\nThe next day Eriol walks in the garden and meets the door man, and is told the story of \"The Music of the Ainur\". A creation myth where the creator sings into being immortal spirits, that with their help sing into being the world. One of these spirits becomes evil, and begins to dislike the two races that are placed within the world, Elves and Men. Some of the spirits decided to be caretakers for the world and broke up into two groups the Valor, care takers and the Maia, servants to them.\r\n\r\nThat night he asks to hear more stories, and is told \"The Coming of Valor and the Building of Valinor\". the care takers have their own parts of the world, but eventually get together and create a can all live in the world. They placed it on the war West of the world and they call it Valinor, all but the evil one decided to live there, he made his home in the mountains of the north.\r\n\r\nEriol soon wishes to stay on the island, but must get the queen's permission, but she tells him he must learn more about them first. She then tells him of \"The Chaining of Melko\". It tells how the evil one tried to destroy that which the other Valor created and how subdued him and put him on trial for his crimes.\r\n\r\nEriol then asks about the elves and is told \"The Coming of the Elves and the Making of Kôr.\" Near the end of the evil ones imprisonment the Elves came into being, and seeing them, the Valor requested to talk with them, but only three came to Valinor, of these three the original three tribes of Elves grew, of these many returned and built the city Kôr near Valinor. Here the magic Silmarillion jewels.\r\n\r\nThe queen ends her story, and Eriol returns to Lindo's house, where at story time Lindo tells \"The Theft of Melko and the Darkening of Valinor\" This tells how the evil one causes distrust between the elves and the Valor, then while the elves are at Valinor the three Silmarils. He hides in a cave and meets a spider woman that offers to help him, and together they go to Valinor, and destroy the two Trees of Light, they are almost caught but manage to escape, with the help of the spider woman's power to cause darkness.\r\n\r\nThe story continues without a break, but with a new title \"The Flight of the Noldoli\". One of the groups of elves gets restless after helping hunt for the evil one, they feel ill used and steal boats from another group, they become exiles and escape to the East and to the continent.\r\n\r\nSome time later a guest arrives and Lindo tells \"The Tale of the Sun and Moon\". It tells that after Valinor was darkened, they cried over the trees which made bloom one last fruit, it shined brightly and they placed it in the sky. One of the valor sing to the other tree and then touch it as it brings a blossom of a fruit but it is dropped and the fruit doesn't shine as brightly, they place it in the sky also, where they will now be the moon and sun.\r\n\r\nLindo asks his wife to tell the next story which is, \"The Hiding of Valinor\" This tells how the valor feared evil would return so they destroy all roads leading to Valinor, and the only way for the elves to reach there is by a bridge rainbow, that is really the hair of a Valor. Then three strangers come to Valinor and they asked to take hold of the sun, and moon, and with a cord they bind them together, and create the days, months and years. They then introduce themselves as the sons of time.\r\n\r\nTime passes and the new guest to the cottage is asked to tell a story, he then tells, \"Gilfanon's Tale: The Travail of the Noldoli and the Coming of Mankind\". The story starts with elves that did not go to Valinor but stayed where they awakened, they were taught forbidden things by a wizard. They found men sleeping in caves and woke them up. At first they were friends by the evil one sent messengers to make men and elves hate, a war broke out, and men where beaten and driven away. They get together with the Noldoli who left Valinor, and try to fight the evil one but lose and some are turned into slaves while the two groups of elves learn to distrust each other.\r\n\r\nThe new guest's story ends and he leaves, while Eriol remains at Lindo's for a while longer. The story continues in \"The Book of Lost Tales: Part II\".",
+      "isbn": "9780395354391",
+      "authors": [
+        5
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1983-01-01",
+      "page_count": 304
+    }
+  },
+  {
+    "model": "books.author",
+    "pk": 6,
+    "fields": {
+      "name": "Isaac Asimov",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 41,
+    "fields": {
+      "title": "Second Foundation",
+      "description": "After years of struggle, the Foundation lay in ruins -- destroyed by the mutant mind power of the Mule. But it was rumored that there was a Second Foundation hidden somewhere at the end of the Galaxy, established to preserve the knowledge of mankind through the long centuries of barbarism. The Mule had failed to find it the first time -- but now he was certain he knew where it lay.\r\n\r\nThe fate of the Foundation rests on young Arkady Darell, only fourteen years old and burdened with a terrible secret. As its scientists girded for a final showdown with the Mule, the survivors of the First Foundation began their desperate search. They too wanted the Second Foundation destroyed... before it destroyed them.",
+      "isbn": "8401463335",
+      "authors": [
+        6
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1953-01-01",
+      "page_count": 237
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 42,
+    "fields": {
+      "title": "Les Robots",
+      "description": "I, Robot is a fixup novel of science fiction short stories or essays by American writer Isaac Asimov. The stories originally appeared in the American magazines Super Science Stories and Astounding Science Fiction between 1940 and 1950 and were then compiled into a book for stand-alone publication by Gnome Press in 1950, in an initial edition of 5,000 copies. The stories are woven together by a framing narrative in which the fictional Dr. Susan Calvin tells each story to a reporter (who serves as the narrator) in the 21st century. Although the stories can be read separately, they share a theme of the interaction of humans, robots, and morality, and when combined they tell a larger story of Asimov's fictional history of robotics.\r\n\r\n\r\n----------\r\n\r\nContains:\r\n\"Introduction\" \r\n\"Robbie\" (1940, 1950)\r\n\"Runaround\" (1942)\r\n\"Reason\" (1941)\r\n\"Catch That Rabbit\" (1944)\r\n\"Liar!\" (1941)\r\n\"Little Lost Robot\" (1947)\r\n\"Escape!\" (1945)\r\n\"Evidence\" (1946)\r\n\"The Evitable Conflict\" (1950)",
+      "isbn": "9780194792288",
+      "authors": [
+        6
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1950-01-01",
+      "page_count": 245
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 43,
+    "fields": {
+      "title": "The Last Question",
+      "description": "\"The Last Question\" is a science fiction short story by Isaac Asimov, first published in Science Fiction Quarterly in November 1956. Asimov considered it his favorite of all his own works.\r\n\r\nTold in seven vignettes spanning billions of years, the story follows humanity's recurring attempts to answer a single question: can entropy be reversed? It begins in 2061, when two technicians drunkenly pose the question to Multivac — a vast supercomputer that has just solved Earth's energy crisis. The story then leaps forward through the ages. Civilization spreads across galaxies, merges with its machines, and eventually transcends physical form entirely. Yet across all this time, the question goes unanswered. Every iteration of the computer, growing ever more powerful and abstract, can only respond: \"THERE IS AS YET INSUFFICIENT DATA FOR A MEANINGFUL ANSWER.\"\r\nAt the end of time, with the universe cold and dark and humanity long dissolved into a collective consciousness, the last mind poses the question one final time — then ceases to exist. Only the computer remains, alone in hyperspace, still working on the problem. When it finally finds the answer, there is no one left to hear it. So it does the only logical thing.\r\n\r\nFew short stories attempt to cover several trillion years of history. Fewer still stick the landing.",
+      "isbn": "9781884214493",
+      "authors": [
+        6
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2007-01-01"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 44,
+    "fields": {
+      "title": "Foundation",
+      "description": "One of the great masterworks of science fiction, the Foundation novels of Isaac Asimov are unsurpassed for their unique blend of nonstop action, daring ideas, and extensive world-building. \r\n\r\nThe story of our future begins with the history of Foundation and its greatest psychohistorian: Hari Seldon.  For twelve thousand years the Galactic Empire has ruled supreme. Now it is dying.  Only Hari Seldon, creator of the revolutionary science of psychohistory, can see into the future--a dark age of ignorance, barbarism, and warfare that will last thirty thousand years. To preserve knowledge and save mankind, Seldon gathers the best minds in the Empire--both scientists and scholars--and brings them to a bleak planet at the edge of the Galaxy to serve as a beacon of hope for future generations. He calls his sanctuary the Foundation.\r\n\r\nBut soon the fledgling Foundation finds itself at the mercy of corrupt warlords rising in the wake of the receding Empire. And mankind's last best hope is faced with an agonizing choice: submit to the barbarians and live as slaves--or take a stand for freedom and risk total destruction.",
+      "isbn": "0586010807",
+      "authors": [
+        6
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1951-01-01",
+      "page_count": 240
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 45,
+    "fields": {
+      "title": "The Complete Robot",
+      "description": "The complete collection of Isaac Asimov’s classic Robot stories.\r\n\r\nIn these stories, Asimov creates the Three Laws of Robotics and ushers in the Robot Age – when Earth is ruled by master-machines and when robots are more human than mankind.\r\n\r\nThe Complete Robot is the ultimate collection of timeless, amazing and amusing robot short stories from the greatest science fiction writer of all time, offering golden insights into robot thought processes. Asimov’s Three Laws of Robotics were programmed into real computers thirty years ago at the Massachusetts Institute of Technology – with surprising results. Readers of today still have many surprises in store…\r\n\r\nA Boy's Best Friend\r\nSally\r\nSomeday\r\nSome Immobile Robots\r\nPoint of View\r\nThink!\r\nTrue Love\r\nSome Metallic Robots\r\nRobot AL-76 Goes Astray\r\nVictory Unintentional\r\nStranger in Paradise\r\nLight Verse\r\nSegregationist\r\n[Robbie](https://openlibrary.org/works/OL46260W)\r\nSome Humanoid Robots\r\nLet's Get Together\r\nMirror Image\r\nThe Tercentenary Incident\r\nPowell and Donovan\r\nFirst Law\r\nRunaround\r\nReason\r\nCatch That Rabbit\r\nSusan Calvin\r\nLiar!\r\nSatisfaction Guaranteed\r\nLenny\r\nGalley Slave\r\nLittle Lost Robot\r\nRisk\r\nEscape!\r\nEvidence\r\nThe Evitable Conflict\r\nFeminine Intuition\r\nTwo Climaxes\r\n—That Thou Art Mindful of Him!\r\nThe Bicentennial Man",
+      "isbn": "3404240820",
+      "authors": [
+        6
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1982-01-01",
+      "page_count": 557
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 46,
+    "fields": {
+      "title": "Foundation and Empire",
+      "description": "Led by its founding father, the great psychohistorian Hari Seldon, and taking advantage of its superior science and technology, the Foundation has survived the greed and barbarism of its neighboring warrior-planets. Yet now it must face the Empire still the mightiest force in the Galaxy even in its death throes. When an ambitious general determined to restore the Empire's glory turns the vast Imperial fleet toward the Foundation, the only hope for the small planet of scholars and scientists lies in the prophecies of Hari Seldon.",
+      "isbn": "9788576574842",
+      "authors": [
+        6
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1945-01-01",
+      "page_count": 253
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 47,
+    "fields": {
+      "title": "The Foundation Trilogy",
+      "description": "- Foundation\r\n - Foundation and Empire\r\n - Second Foundation\r\n\r\nIsaac Asimov's Foundation novels are some of the great masterworks of science fiction. Unsurpassed for their unique blend of nonstop action, daring ideas, and extensive world-building, they chronicle the struggle of a courageous group of men and women working to preserve humanity’s light against an inexorable tide of darkness and violence.\r\n\r\nLed by its founding father, the great psychohistorian Hari Seldon, and taking advantage of its superior science and technology, the Foundation has survived the greed and barbarism of its neighboring warrior-planets. Yet now it must face the Empire—still the mightiest force in the Galaxy even in its death throes. When an ambitious general determined to restore the Empire’s glory turns the vast imperial fleet toward the Foundation, the only hope for the small planet of scholars and scientists lies in the prophecies of Hari Seldon.\r\n\r\nBut not even Hari Seldon could have predicted the birth of the extraordinary creature called The Mule, a mutant intelligence with a power greater than a dozen battle fleets… a power that can turn the strongest-willed human into an obedient slave.",
+      "isbn": "9788498890648",
+      "authors": [
+        6
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1950-01-01",
+      "page_count": 605
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 48,
+    "fields": {
+      "title": "Foundation's Edge",
+      "description": "After the defeat of the Mule by the Second Foundation, Terminus enjoys a period of prosperity and stability which is publicly attributed to the Seldon Plan, but which some feel is the work of the Second Foundation.  A search is begun to determine if the Second Foundation still exists.  Meanwhile, the Second Foundation finds that there is evidence of an independent force acting against the Mule to protect the Seldon Plan.  A search is launched to determine what this force is and if it is a threat.  The end result is a search for Earth (Terminus being the last planet settled by the galactic empire and Earth being the metaphoric opposite of first human planet settled).  A final three way confrontation results in a fateful decision and an open question.",
+      "isbn": "9788960177598",
+      "authors": [
+        6
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1977-01-01",
+      "page_count": 432
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 49,
+    "fields": {
+      "title": "The Robots of Dawn",
+      "description": "A millennium into the future two advances have altered the course of human history: the colonization of the Galaxy and the creation of the positronic brain. Isaac Asimov's Robot novels chronicle the unlikely partnership between a New York City detective and a humanoid robot who must learn to work together.\r\n\r\nDetective Elijah Baley is called to the Spacer world Aurora to solve a bizarre case of roboticide. The prime suspect is a gifted roboticist who had the means, the motive, and the opportunity to commit the crime. There's only one catch: Baley and his positronic partner, R. Daneel Olivaw, must prove the man innocent. For in a case of political intrigue and love between woman and robot gone tragically wrong, there's more at stake than simple justice. This time Baley's career, his life, and Earth's right to pioneer the Galaxy lie in the delicate balance.",
+      "isbn": "0932096255",
+      "authors": [
+        6
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1983-01-01",
+      "page_count": 446
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 50,
+    "fields": {
+      "title": "The Caves of Steel",
+      "description": "In the future you will walk down the crowded streets of New York City not knowing if the bodies brushing past you are humans or androids. With tensions already mounting between humans and robots, the murder of a Spacer must be handled in a politically-correct fashion so Detective Elijah Baley is assigned a robot partner.\r\n\r\nBaley and R. Daneel Olivaw become like Sir Arthur Conan Doyle s Sherlock Holmes and Dr. Watson, Law & Order s Detectives Lennie Brisco and Ed Green, and Training Day s Detective Alonzo Harris and Officer Jake Hoyt disparate partners who must work together to solve a crime. The only problem is, Baley doesn't trust anyone not his boss, not his wife, and certainly not his robot partner.",
+      "isbn": "0586008357",
+      "authors": [
+        6
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1953-01-01",
+      "page_count": 259
+    }
+  },
+  {
+    "model": "books.author",
+    "pk": 7,
+    "fields": {
+      "name": "Ursula K. Le Guin",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 51,
+    "fields": {
+      "title": "The Dispossessed",
+      "description": "Shevek, a brilliant physicist, decides to take action. He will seek answers, question the unquestionable, and attempt to tear down the walls of hatred that have isolated his planet of anarchists from the rest of the civilized universe.  To do this dangerous task will mean giving up his family and possibly his life.  Shevek must make the unprecedented journey to the planet, Anarres, to challenge the complex structures of life and living, and ignite the fires of change.",
+      "isbn": "9788445009307",
+      "authors": [
+        7
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1974-01-01",
+      "page_count": 352
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 52,
+    "fields": {
+      "title": "The Left Hand of Darkness",
+      "description": "[Comment by Kim Stanley Robinson, on The Guardian's website][1]:\r\nThe Left Hand of Darkness by Ursula K Le Guin (1969)\r\n\r\n> One of my favorite novels is The Left Hand of Darkness, by Ursula K Le Guin. For more than 40 years I've been recommending this book to people who want to try science fiction for the first time, and it still serves very well for that. One of the things I like about it is how clearly it demonstrates that science fiction can have not only the usual virtues and pleasures of the novel, but also the startling and transformative power of the thought experiment.\r\n\r\n> In this case, the thought experiment is quickly revealed: \"The king was pregnant,\" the book tells us early on, and after that we learn more and more about this planet named Winter, stuck in an ice age, where the humans are most of the time neither male nor female, but with the potential to become either. The man from Earth investigating this situation has a lot to learn, and so do we; and we learn it in the course of a thrilling adventure story, including a great \"crossing of the ice\". Le Guin's language is clear and clean, and has within it both the anthropological mindset of her father Alfred Kroeber, and the poetry of stories as magical things that her mother Theodora Kroeber found in native American tales. This worldly wisdom applied to the romance of other planets, and to human nature at its deepest, is Le Guin's particular gift to us, and something science fiction will always be proud of. Try it and see – you will never think about people in quite the same way again.\r\n\r\n\r\n  [1]: https://www.theguardian.com/books/2011/may/14/science-fiction-authors-choice",
+      "isbn": "841792504X",
+      "authors": [
+        7
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1969-01-01",
+      "page_count": 304
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 53,
+    "fields": {
+      "title": "The ones who walk away from Omelas",
+      "description": "Some inhabitants of a peaceful kingdom cannot tolerate the act of cruelty that underlies its happiness.",
+      "isbn": "8418930470",
+      "authors": [
+        7
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1973-01-01",
+      "page_count": 42
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 54,
+    "fields": {
+      "title": "A Wizard of Earthsea",
+      "description": "The first novel of Ursula K. Le Guin's must-read Earthsea Cycle. \"The magic of Earthsea is primal; the lessons of Earthsea remain as potent, as wise, and as necessary as anyone could dream.\" (Neil Gaiman)\r\n\r\nGed was the greatest sorcerer in Earthsea, but in his youth he was the reckless Sparrowhawk. In his hunger for power and knowledge, he tampered with long-held secrets and loosed a terrible shadow upon the world.\r\n\r\nThis is the tumultuous tale of his testing, how he mastered the mighty words of power, tamed an ancient dragon, and crossed death's threshold to restore the balance.\r\n\r\nWith stories as perennial and universally beloved as The Chronicles of Narnia and The Lord of The Rings—but also unlike anything but themselves—Ursula K. Le Guin’s Earthsea novels are some of the most acclaimed and awarded works in literature. They have received accolades such as the National Book Award, a Newbery Honor, the Nebula Award, and many more honors, commemorating their enduring place in the hearts and minds of readers and the literary world alike.\r\n\r\nJoin the millions of fantasy readers who have explored these lands. As The Guardian put it: \"Ursula Le Guin's world of Earthsea is a tangled skein of tiny islands cast on a vast sea. The islands' names pull at my heart like no others: Roke, Perilane, Osskil .",
+      "isbn": "9788385276005",
+      "authors": [
+        7
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1968-01-01",
+      "page_count": 205
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 55,
+    "fields": {
+      "title": "The Lathe of Heaven",
+      "description": "“The Lathe of Heaven” ; 1971 ( Ursula Le Guin received the 1973 Locus Award for this story)\r\nGeorge Orr has a gift – he is an effective dreamer:  his dreams become reality when he wakes up. He is aware of his past and present, two or more sets of memories, although the people around him are only aware of the current reality. \r\nThis science fiction story is set in Portland, Oregon, in/around the late 1990s - early 2000s.  Orr begins to take drugs to suppress dreams but eventually he is sent to a psychotherapist, Dr. William Haber, who has developed an electronic  machine, the Augmentor, which records the brain patterns of a person as they dream.  When Haber realizes that he can use Orr's unique ability to change their world, the consequences  are both beneficial and frightening,  both locally and globally.  Orr seeks out the help of a civil rights lawyer, Heather Lelache, who attends a treatment session, and sees Portland change before her very eyes as Orr awakens.  In a strange turn of events, Heather helps Orr by putting him in a dream state where Orr can undo some of Haber's actions. The result – Aliens on the Moon land on Earth !  A special affinity exists between George Orr and the Aliens, who seem to understand  his unique gift.   Ultimately Haber decides to impose Orr's brain patterns on his own, so that he can bring about world-wide changes. Orr and Heather feel the chaos and a sense of a void as Haber dreams.  Orr rushes back to Haber's office and turns off the Augmentor.  The world  returns to April 1998.",
+      "isbn": "9789722331562",
+      "authors": [
+        7
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1971-01-01",
+      "page_count": 184
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 56,
+    "fields": {
+      "title": "The Tombs of Atuan",
+      "description": "Arha's isolated existence as high priestess in the tombs of Atuan is jarred by a thief who seeks a special treasure.",
+      "isbn": "0575033258",
+      "authors": [
+        7
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1971-01-01",
+      "page_count": 173
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 57,
+    "fields": {
+      "title": "The Farthest Shore",
+      "description": "A young prince joins forces with a master wizard on a journey to discover a cause and remedy for the loss of magic in Earthsea. Darkness Threatens to overtake Earthsea. As the world and its wizards are losing their magic, Ged -- powerful Archmage, wizard, and dragonlord -- embarks on a sailing journey with highborn young prince, Arren. They travel far beyond the realm of death to discover the cause of these evil disturbances and to restore magic to a land desperately thirsty for it.",
+      "isbn": "9780689845345",
+      "authors": [
+        7
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1972-01-01",
+      "page_count": 223
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 58,
+    "fields": {
+      "title": "Tales from Earthsea",
+      "description": "In this final episode of \"The Earthsea Cycle\", the widowed Tenar finds and nurses her aging friend, Sparrowhawk, a magician who has lost his powers.",
+      "isbn": "9780441009329",
+      "authors": [
+        7
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2001-01-01",
+      "page_count": 328
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 59,
+    "fields": {
+      "title": "Tehanu (The Earthsea Cycle, Book 4)",
+      "description": "In this final episode of \"The Earthsea Cycle\", the widowed Tenar finds and nurses her aging friend, Sparrowhawk, a magician who has lost his powers.",
+      "isbn": "0241138280",
+      "authors": [
+        7
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1990-01-01",
+      "page_count": 260
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 60,
+    "fields": {
+      "title": "The Word for World is Forest",
+      "description": "Centuries in the future, Terrans have established a logging colony & military base named “New Tahiti” on a tree-covered planet whose small, green-furred, big-eyed inhabitants have a culture centered on lucid dreaming. Terran greed spirals around native innocence & wisdom, overturning the ancient society.\r\n\r\nHumans have learned interstellar travel from the Hainish (the origin-planet of all humanoid races, including Athsheans). Various planets have been expanding independently, but during the novel it’s learned that the League of All Worlds has been formed. News arrives via an ansible, a new discovery. Previously they had been cut off, 27 light years from home.\r\n\r\nThe story occurs after The Dispossessed, where both the ansible & the League of Worlds are unrealised. Also well before Planet of Exile, where human settlers have learned to coexist. The 24th century has been suggested.\r\n\r\nTerran colonists take over the planet locals call Athshe, meaning “forest,” rather than “dirt,” like their home planet Terra. They follow the 19th century model of colonization: felling trees, planting farms, digging mines & enslaving indigenous peoples. The natives are unequipped to comprehend this. They’re a subsistence race who rely on the forests & have no cultural precedent for tyranny, slavery or war. The invaders take their land without resistance until one fatal act sets rebellion in motion & changes the people of both worlds forever.",
+      "isbn": "9786586015096",
+      "authors": [
+        7
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1972-01-01",
+      "page_count": 169
+    }
+  },
+  {
+    "model": "books.author",
+    "pk": 8,
+    "fields": {
+      "name": "Frank Herbert",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 61,
+    "fields": {
+      "title": "Dune",
+      "description": "Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, heir to a noble family tasked with ruling an inhospitable world where the only thing of value is the \"spice\" melange, a drug capable of extending life and enhancing consciousness. Coveted across the known universe, melange is a prize worth killing for...\r\n\r\nWhen House Atreides is betrayed, the destruction of Paul's family will set the boy on a journey toward a destiny greater than he could ever have imagined. And as he evolves into the mysterious man known as Muad'Dib, he will bring to fruition humankind's most ancient and unattainable dream.\r\n\r\nA stunning blend of adventure and mysticism, environmentalism and politics, Dune won the first Nebula Award, shared the Hugo Award, and formed the basis of what is undoubtedly the grandest epic in science fiction.",
+      "isbn": "9782221252055",
+      "authors": [
+        8
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1965-01-01",
+      "page_count": 592
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 62,
+    "fields": {
+      "title": "Dune Messiah",
+      "description": "**Book Two in the Magnificent Dune Chronicles—the Bestselling Science Fiction Adventure of All Time**\r\n\r\nDune Messiah continues the story of Paul Atreides, better known—and feared—as the man christened Muad’Dib. As Emperor of the known universe, he possesses more power than a single man was ever meant to wield. Worshipped as a religious icon by the fanatical Fremen, Paul faces the enmity of the political houses he displaced when he assumed the throne—and a conspiracy conducted within his own sphere of influence.\r\n\r\nAnd even as House Atreides begins to crumble around him from the machinations of his enemies, the true threat to Paul comes to his lover, Chani, and the unborn heir to his family’s dynasty...",
+      "isbn": "5237041485",
+      "authors": [
+        8
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1969-01-01",
+      "page_count": 278
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 63,
+    "fields": {
+      "title": "God Emperor of Dune",
+      "description": "Fourth book in the Dune series. Takes place 3500 years after the events of the original trilogy. Tells the story of Leto, the son of Paul Atreides, who has traded his humanity to become an immortal sandworm of Dune.",
+      "isbn": "838188778X",
+      "authors": [
+        8
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1981-01-01",
+      "page_count": 464
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 64,
+    "fields": {
+      "title": "Children of Dune",
+      "description": "The science fiction masterpiece continues in the \"major event,\"( Los Angeles Times) Children of Dune. With millions of copies sold worldwide, Frank Herbert's Dune novels stand among the major achievements of the human imagination and one of the most significant sagas in the history of literary science fiction. The Children of Dune are twin siblings Leto and Ghanima Atreides, whose father, the Emperor Paul Muad'Dib, disappeared in the deserts of Arrakis. Like their father, they possess supernormal abilities—making them valuable to their aunt Alia, who rules the Empire. If Alia can obtain the secrets of the twins' prophetic visions, her rule will be absolute. But the twins have their own plans for their destiny.",
+      "isbn": "9788373017269",
+      "authors": [
+        8
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1976-01-01",
+      "page_count": 472
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 65,
+    "fields": {
+      "title": "The Great Dune Trilogy",
+      "description": "**Three of the greatest SF novels in the world in one bumper omnibus**\r\n\r\nHerbert's evocative, epic tales are set on the desert planet Arrakis, the focus for a complex political and military struggle with galaxy-wide repercussions.\r\n\r\nArrakis is the source of spice, a mind-enhancing drug which makes interstellar travel possible; it is the most valuable substance in the galaxy. When Duke Atreides and his family take up court there, they fall into a trap set by the Duke's bitter rival, Baron Harkonnen. The Duke is poisoned, but his wife and her son Paul escape to the vast and arid deserts of Arrakis, which have given the planet its nickname of Dune.\r\n\r\nPaul and his mother join the Fremen, the Arrakis natives, who have learnt to live in this harsh and complex ecosystem. But learning to survive is not enough - Paul's destiny was mapped out long ago and his mother is committed to seeing it fulfilled.",
+      "isbn": "9780575070707",
+      "authors": [
+        8
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1977-01-01",
+      "page_count": 912
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 66,
+    "fields": {
+      "title": "Heretics of Dune",
+      "description": "With more than ten million copies sold, Frank Herbert's magnificent Dune books stand among the major achievements of the human imagination. In this, the fifth and most spectacular Dune book of all, the planet Arrakis--now called Rakis--is becoming desert again. The Lost Ones are returning home from the far reaches of space. The great sandworms are dying. And the children of Dune's children awaken from empire as from a dream, wielding the new power of a heresy called love...",
+      "isbn": "9780425087329",
+      "authors": [
+        8
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1984-01-01",
+      "page_count": 510
+    }
+  },
+  {
+    "model": "books.author",
+    "pk": 9,
+    "fields": {
+      "name": "William Shakespeare",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 67,
+    "fields": {
+      "title": "Romeo and Juliet",
+      "description": "Romeo and Juliet is a tragedy written by William Shakespeare early in his career about two young Italian star-crossed lovers whose deaths ultimately reconcile their feuding families. It was among Shakespeare's most popular plays during his lifetime and, along with Hamlet, is one of his most frequently performed plays. Today, the title characters are regarded as archetypal young lovers.",
+      "isbn": "9783111199955",
+      "authors": [
+        9
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1597-01-01",
+      "page_count": 170
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 68,
+    "fields": {
+      "title": "King Lear",
+      "description": "King Lear divides his kingdom among the two daughters who flatter him and banishes the third one who loves him. His eldest daughters both then reject him at their homes, so Lear goes mad and wanders through a storm. His banished daughter returns with an army, but they lose the battle and Lear, all his daughters and more, die.\r\n\r\n([source][1])\r\n\r\n\r\n  [1]: https://www.shakespeare.org.uk/explore-shakespeare/shakespedia/shakespeares-plays/king-lear/",
+      "isbn": "9781973736042",
+      "authors": [
+        9
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1608-01-01",
+      "page_count": 193
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 69,
+    "fields": {
+      "title": "Twelfth Night",
+      "description": "Presents the original text of Shakespeare's play side by side with a modern version, with discussion questions, role-playing scenarios, and other study activities.",
+      "isbn": "9798631571624",
+      "authors": [
+        9
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1734-01-01",
+      "page_count": 154
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 70,
+    "fields": {
+      "title": "Chapterhouse Dune",
+      "description": "The desert planet Arrakis, called Dune, has been destroyed. Now the Bene Gesserit, heirs to Dune's powers, have colonized a green world and are turning it into a desert, mile by scorched mile.",
+      "isbn": "0593201779",
+      "authors": [
+        8
+      ],
+      "genre": "sci_fi",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1985-01-01",
+      "page_count": 482
+    }
+  },
+  {
+    "model": "books.author",
+    "pk": 10,
+    "fields": {
+      "name": "Terry Pratchett",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 71,
+    "fields": {
+      "title": "Going Postal",
+      "description": "Suddenly, condemned arch-swindler Moist von Lipwig found himself with a noose around his neck and dropping through a trapdoor into ... a government job? By all rights, Moist should be meeting his maker rather than being offered a position as Postmaster by Lord Vetinari, supreme ruler of Ankh-Morpork. Getting the moribund Postal Service up and running again, however, may prove an impossible task, what with literally mountains of decades-old undelivered mail clogging every nook and cranny of the broken-down post office. Worse still, Moist could swear the mail is talking to him. Worst of all, it means taking on the gargantuan, greedy Grand Trunk clacks communication monopoly and its bloodthirsty piratical headman. But if the bold and undoable are what's called for, Moist's the man for the job -- to move the mail, continue breathing, get the girl, and specially deliver that invaluable commodity that every being, human or otherwise, requires: hope.",
+      "isbn": "9788378390022",
+      "authors": [
+        10
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2004-01-01",
+      "page_count": 416
+    }
+  },
+  {
+    "model": "books.author",
+    "pk": 11,
+    "fields": {
+      "name": "Neil Gaiman",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 72,
+    "fields": {
+      "title": "Good Omens",
+      "description": "Armageddon only happens once, you know. They don't let you go around again until you get it right.\r\n\r\nAccording to the Nice and Accurate Prophecies of Agnes Nutter, Witch - the world's only totally reliable guide to the future, written in 1655, before she exploded - the world will end on a Saturday.\r\n\r\nNext Saturday, in fact. Just after tea...\r\n\r\nPeople have been predicting the end of the world almost from its very beginning, so it's only natural to be sceptical when a new date is set for Judgement Day.\r\n\r\nThis time though, the armies of Good and Evil really do appear to be massing. The four Bikers of the Apocalypse are hitting the road. But both the angels and demons - well, one fast-living demon and a somewhat fussy angel - would quite like the Rapture not to happen.\r\n\r\nOh, and someone seems to have misplaced the Antichrist...",
+      "isbn": "0894808532",
+      "authors": [
+        11,
+        10
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1990-01-01",
+      "page_count": 400
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 73,
+    "fields": {
+      "title": "Night Watch",
+      "description": "One moment, Sir Sam Vimes is in his old patrolman form, chasing a sweet-talking psychopath across the rooftops of Ankh-Morpork. The next, he's lying naked in the street, having been sent back thirty years courtesy of a group of time-manipulating monks who won't leave well enough alone. This Discworld is a darker place that Vimes remembers too well, three decades before his title, fortune, beloved wife, and impending first child. Worse still, the murderer he's pursuing has been transported back also. Worst of all, it's the eve of a fabled street rebellion that needlessly destroyed more than a few good (and not so good) men. Sam Vimes knows his duty, and by changing history he might just save some worthwhile necks—though it could cost him his own personal future. Plus there's a chance to steer a novice watchman straight and teach him a valuable thing or three about policing, an impressionable young copper named Sam Vimes.",
+      "isbn": "9780753140505",
+      "authors": [
+        10
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2002-01-01",
+      "page_count": 400
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 74,
+    "fields": {
+      "title": "Guards! Guards!",
+      "description": "Here there be dragons ... and the denizens of Ankh-Morpork wish one huge firebreather would return from whence it came. Long believed extinct, a superb specimen of draco nobilis (\"noble dragon\" for those who don't understand italics) has appeared in Discworld's greatest city. Not only does this unwelcome visitor have a nasty habit of charbroiling everything in its path, in rather short order it is crowned King (it is a noble dragon, after all ...).",
+      "isbn": "9781407034706",
+      "authors": [
+        10
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1989-01-01",
+      "page_count": 378
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 75,
+    "fields": {
+      "title": "Making Money",
+      "description": "The Ankh-Morpork Post Office is running like . . . well, not at all like a government office. The mail is delivered promptly; meetings start and end on time; five out of six letters relegated to the Blind Letter Office ultimately wend their way to the correct addresses. Postmaster General Moist von Lipwig, former arch-swindler and confidence man, has exceeded all expectations—including his own. So it's somewhat disconcerting when Lord Vetinari summons Moist to the palace and asks, \"Tell me, Mr. Lipwig, would you like to make some real money?\"Vetinari isn't talking about wages, of course. He's referring, rather, to the Royal Mint of Ankh-Morpork, a venerable institution that haas run for centuries on the hereditary employment of the Men of the Sheds and their loyal outworkers, who do make money in their spare time. Unfortunately, it costs more than a penny to make a penny, so the whole process seems somewhat counterintuitive.Next door, at the Royal Bank, the Glooper, an \"analogy machine,\" has scientifically established that one never has quite as much money at the end of the week as one thinks one should, and the bank's chairman, one elderly Topsy (nee Turvy) Lavish, keeps two loaded crossbows at her desk. Oh, and the chief clerk is probably a vampire.But before Moist has time to fully consider Vetinari's question, fate answers it for him. Now he's not only making money, but enemies too; he's got to spring a prisoner from jail, break into his own bank vault, stop the new manager from licking his face, and, above all, find out where all the gold has gone—otherwise, his life in banking, while very exciting, is going to be really, really short. . . .",
+      "isbn": "9781407034003",
+      "authors": [
+        10
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2007-01-01",
+      "page_count": 400
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 76,
+    "fields": {
+      "title": "Reaper Man",
+      "description": "They say there are only two things you can count on ...But that was before DEATH started pondering the existential. Of course, the last thing anyone needs is a squeamish Grim Reaper and soon his Discworld bosses have sent him off with best wishes and a well-earned gold watch. Now DEATH is having the time of his life, finding greener pastures where he can put his scythe to a whole new use.But like every cutback in an important public service, DEATH's demise soon leads to chaos and unrest -- literally, for those whose time was supposed to be up, like Windle Poons. The oldest geezer in the entire faculty of Unseen University -- home of magic, wizardry, and big dinners -- Windle was looking forward to a wonderful afterlife, not this boring been-there-done-that routine. To get the fresh start he deserves, Windle and the rest of Ankh-Morpork's undead and underemployed set off to find DEATH and save the world for the living (and everybody else, of course).",
+      "isbn": "1407034774",
+      "authors": [
+        10
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1991-01-01",
+      "page_count": 298
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 77,
+    "fields": {
+      "title": "Mort",
+      "description": "Death takes on an apprentice who's an individual thinker.",
+      "isbn": "0451451139",
+      "authors": [
+        10
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1987-01-01",
+      "page_count": 297
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 78,
+    "fields": {
+      "title": "Feet of Clay",
+      "description": "Nineteenth in the Discworld universe and third entry of the City Watch series, this novel follows Captain Carrot, Commander Vimes, and the rest of the Night Watch as they attempt to unravel the mystery of who poisoned Lord Vetinari the Patrician.",
+      "isbn": "0061052507",
+      "authors": [
+        10
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1996-01-01",
+      "page_count": 379
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 79,
+    "fields": {
+      "title": "Men at Arms",
+      "description": "\"Unadulterated fun.\" —San Francisco Chronicle\r\n\r\n\"Pratchett has now moved beyond the limits of humorous fantasy, and should be recognized as one of the more significant contemporary English-language satirists.\" —Publishers Weekly\r\n\r\nThe fifteenth novel in the Discworld series from acclaimed New York Times bestselling author Sir Terry Pratchett, featuring a lycanthropic recruit and a sword in a stone!\r\n\r\nCorporal Carrot has been promoted! He’s now in charge of the new recruits guarding Ankh-Morpork, Discworld’s greatest city, from Barbarian Tribes, Miscellaneous Marauders, unlicensed Thieves, and such. It’s a big job, particularly for an adopted dwarf. But an even bigger job awaits. An ancient document has just revealed that Ankh-Morpork, ruled for decades by Disorganized crime, has a secret sovereign! And his name is Carrot . . .\r\n\r\nAnd so begins the most awesome epic encounter of all time, or at least all afternoon, in which the fate of a city—indeed of the universe itself!—depends on a young man’s courage, an ancient sword’s magic, and a three-legged poodle’s bladder.",
+      "isbn": "9782266211956",
+      "authors": [
+        10
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1993-01-01",
+      "page_count": 377
+    }
+  },
+  {
+    "model": "books.author",
+    "pk": 12,
+    "fields": {
+      "name": "Ray Friesen",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 80,
+    "fields": {
+      "title": "Small Gods",
+      "description": "In the beginning was the Word.\r\n\r\nAnd the Word was: \"Hey, you!\"\r\n\r\nFor Brutha the novice is the Chosen One. He wants peace and justice and brotherly love.\r\n\r\nHe also wants the Inquisition to stop torturing him now, please...",
+      "isbn": "9781804990186",
+      "authors": [
+        10,
+        12
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1992-01-01",
+      "page_count": 350
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 81,
+    "fields": {
+      "title": "Words of Radiance",
+      "description": "The eagerly awaited sequel to the New York Times bestselling The Way of Kings.\r\n\r\nSix years ago, the Assassin in White, a hireling of the inscrutable Parshendi, assassinated the Alethi king on the very night a treaty between men and Parshendi was being celebrated. So began the Vengeance Pact among the highprinces of Alethkar and the War of Reckoning against the Parshendi.\r\n\r\nNow the Assassin is active again, murdering rulers all over the world, using his baffling powers to thwart every bodyguard and elude all pursuers. Among his prime targets is Highprince Dalinar, widely considered the power behind the Alethi throne. His leading role in the war would seem reason enough, but the Assassin’s master has much deeper motives.\r\n\r\nExpected by his enemies to die the miserable death of a military slave, Kaladin survived to be given command of the royal bodyguards, a controversial first for a low-status darkeyes.  Now he must protect the king and Dalinar from every common peril as well as the distinctly uncommon threat of the Assassin, all while secretly struggling to master remarkable new powers that are somehow linked to his honorspren, Syl.\r\n\r\nBrilliant but troubled Shallan strives along a parallel path. Despite being broken in ways she refuses to acknowledge, she bears a terrible burden: to somehow prevent the return of the legendary Voidbringers and their civilization-ending Desolation. The secrets she needs can be found at the Shattered Plains, but even arriving there proves more difficult than she imagined.\r\n\r\nMeanwhile, at the heart of the Shattered Plains, the Parshendi are making an epochal decision. Hard pressed by years of Alethi attacks, their numbers ever shrinking, they are convinced by their war leader, Eshonai, to risk everything on a desperate gamble with the very supernatural forces they once fled. The consequences for Parshendi and humans alike—indeed, for Roshar itself—are as dangerous as they are incalculable.",
+      "isbn": "9780575099043",
+      "authors": [
+        4
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2012-01-01",
+      "page_count": 1088
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 82,
+    "fields": {
+      "title": "The Hero of Ages",
+      "description": "This book is not only the third book in a trilogy, but it’s Act Three of the the three-act structure for the Mistborn Trilogy—it’s the part of the story where the heroes have discovered that what they thought was the problem all along was not the true danger, and now they’re fighting for not only their own survival but that of the world they live in. The mists are killing people and staying out much longer than they should. The Ashmounts are spewing more and more choking ash into the sky, burying the crops that everyone needs to eat to live. And Ruin, the creature Vin was tricked into freeing from its prison of a millennium, is loose to wreak havoc upon the land. Life under the Lord Ruler is starting to look like paradise in comparison.\r\n\r\nWhile the first book in the trilogy turned the standard fantasy story on its head, this volume (perhaps inevitably?) returns in a way to the tropes the first volume was a reaction against. Yet in this case the enemy is not a human or humanlike Dark Lord, but something more like a force of nature—entropy itself given a will and a guiding personality in the form of Ruin.\r\n\r\nUltimately, the book is about how the characters we have grown to love from the previous volumes—Vin, Elend, Sazed, TenSoon, Spook, Marsh, and others—find the courage and faith to fight on in the face of overwhelming odds, just as Kelsier taught them when he plotted the downfall of the Final Empire.",
+      "isbn": "4150205159",
+      "authors": [
+        4
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2008-01-01",
+      "page_count": 760
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 83,
+    "fields": {
+      "title": "The Way of Kings",
+      "description": "Widely acclaimed for his work completing Robert Jordan’s Wheel of Time saga, Brandon Sanderson now begins a grand cycle of his own, one every bit as ambitious and immersive.\r\n\r\nRoshar is a world of stone and storms. Uncanny tempests of incredible power sweep across the rocky terrain so frequently that they have shaped ecology and civilization alike. Animals hide in shells, trees pull in branches, and grass retracts into the soilless ground. Cities are built only where the topography offers shelter.\r\n\r\nIt has been centuries since the fall of the ten consecrated orders known as the Knights Radiant, but their Shardblades and Shardplate remain: mystical swords and suits of armor that transform ordinary men into near-invincible warriors. Men trade kingdoms for Shardblades. Wars are fought for them, and won by them.\r\n\r\nOne such war rages on a ruined landscape called the Shattered Plains. There, Kaladin, who traded his medical apprenticeship for a spear, has been reduced to slavery. In a war that makes no sense, where ten armies fight separately against a single foe, he struggles to save his men and to fathom the leaders who consider them expendable.\r\n\r\nBrightlord Dalinar Kholin commands one of those other armies. Like his brother, the late king, he is fascinated by an ancient text called The Way of Kings. Troubled by overpowering visions of ancient times and the Knights Radiant, he has begun to doubt his own sanity.\r\n\r\nAcross the ocean, an untried young woman named Shallan seeks to train under the eminent scholar and notorious heretic Jasnah Kholin, Dalinar’s niece. Though she genuinely loves learning, Shallan’s motives are less than pure. As she plans a daring theft, her research for Jasnah hints at secrets of the Knights Radiant and the true cause of the war.\r\n\r\nThe result of more than ten years of planning, writing, and worldbuilding, The Way of Kings is but the opening movement of the Stormlight Archive, a bold masterpiece in the making.\r\n\r\nSpeak again the ancient oaths,\r\n\r\nLife before death.\r\nStrength before weakness.\r\nJourney before destination.\r\n\r\nand return to men the Shards they once bore.\r\n\r\nThe Knights Radiant must stand again.\r\n\r\n-From Cover Flap",
+      "isbn": "605238249X",
+      "authors": [
+        4
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2010-01-01",
+      "page_count": 1008
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 84,
+    "fields": {
+      "title": "Oathbringer",
+      "description": "**The eagerly awaited sequel to the #1 *New York Times* bestselling *Words of Radiance*, from epic fantasy author Brandon Sanderson, at the top of his game**\r\n\r\nIn *Oathbringer*, the third volume of the *New York Times* bestselling Stormlight Archive, humanity faces a new Desolation with the return of the Voidbringers, a foe whose numbers are as great as their thirst for vengeance.\r\n\r\nDalinar Kholin's Alethi armies won a fleeting victory at a terrible cost: the enemy Parshendi summoned the violent Everstorm, which now sweeps the world with destruction, an din its passing awakens the once peaceful and subservient parshmen to the horror of their millennia-long enslavement by humans. While on a desperate flight to warn his family of the threat, Kaladin Stormblessed must come to grips with the fact that the newly kindled anger of the parshmen may be wholly justified.\r\n\r\nNestled in the mountains high above the storms, in the tower city of Urithiru, Shallan Davar investigates the wonders of the ancient stronghold of the Knights Radiant and unearths dark secrets lurking in its depths. And Dalinar realizes that his holy mission to unite his homeland of Alethkar is too narrow in scope. Unless all the nations of Roshar can put aside Dalinar's blood-soaked past and stand together--and unless Dalinar himself can confront that past--even the restoration of the Knights Radiant will not prevent the end of civilization.\r\n\r\nThis description comes from the publisher. *Oathbringer* is the third book of the Stormlight Archive, the first of which is *The Way of Kings*.",
+      "isbn": "9781429951661",
+      "authors": [
+        4
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2017-01-01",
+      "page_count": 1243
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 85,
+    "fields": {
+      "title": "The Final Empire",
+      "description": "For a thousand years ashes have fallen from the sky.  For a thousand years nothing has flourished.  For a thousand years the skaa have been enslaved and live in misery, mired in inevitable fear.  For a thousand years the Lord Ruler has reigned with absolute power, ruling thanks to terror, his powers and his immortality, aided by \"benders\" and \"inquisitors\", along with the powerful magic of Allomancy.",
+      "isbn": "1250868289",
+      "authors": [
+        4
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2001-01-01",
+      "page_count": 669
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 86,
+    "fields": {
+      "title": "The Well of Ascension",
+      "description": "The impossible has been accomplished. The Lord Ruler -- the man who claimed to be god incarnate and brutally ruled the world for a thousand years -- has been vanquished. But Kelsier, the hero who masterminded that triumph, is dead too, and now the awesome task of building a new world has been left to his young protégé, Vin, the former street urchin who is now the most powerful Mistborn in the land, and to the idealistic young nobleman she loves.\r\n\r\nAs Kelsier's protégé and slayer of the Lord Ruler she is now venerated by a budding new religion, a distinction that makes her intensely uncomfortable. Even more worrying, the mists have begun behaving strangely since the Lord Ruler died, and seem to harbor a strange vaporous entity that haunts her.\r\n\r\nStopping assassins may keep Vin's Mistborn skills sharp, but it's the least of her problems. Luthadel, the largest city of the former empire, doesn't run itself, and Vin and the other members of Kelsier's crew, who lead the revolution, must learn a whole new set of practical and political skills to help. It certainly won't get easier with three armies – one of them composed of ferocious giants – now vying to conquer the city, and no sign of the Lord Ruler's hidden cache of atium, the rarest and most powerful allomantic metal.\r\n\r\nAs the siege of Luthadel tightens, an ancient legend seems to offer a glimmer of hope. But even if it really exists, no one knows where to find the Well of Ascension or what manner of power it bestows.",
+      "isbn": "9781427228208",
+      "authors": [
+        4
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2007-01-01",
+      "page_count": 784
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 87,
+    "fields": {
+      "title": "Rhythm of War",
+      "description": "The eagerly awaited sequel to the #1 New York Times bestselling Oathbringer, from epic fantasy author Brandon Sanderson\r\n\r\nAfter forming a coalition of human resistance against the enemy invasion, Dalinar Kholin and his Knights Radiant have spent a year fighting a protracted, brutal war. Neither side has gained an advantage, and the threat of a betrayal by Dalinar's crafty ally Taravangian looms over every strategic move.\r\n\r\nNow, as new technological discoveries by Navani Kholin's scholars begin to change the face of the war, the enemy prepares a bold and dangerous operation. The arms race that follows will challenge the very core of the Radiant ideals, and potentially reveal the secrets of the ancient tower that was once the heart of their strength.\r\n\r\nAt the same time that Kaladin Stormblessed must come to grips with his changing role within the Knights Radiant, his Windrunners face their own problem: As more and more deadly enemy Fused awaken to wage war, no more honorspren are willing to bond with humans to increase the number of Radiants. Adolin and Shallan must lead the coalition’s envoy to the honorspren stronghold of Lasting Integrity and either convince the spren to join the cause against the evil god Odium, or personally face the storm of failure.",
+      "isbn": "1250759781",
+      "authors": [
+        4
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2011-01-01",
+      "page_count": 1136
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 88,
+    "fields": {
+      "title": "Shadows of Self",
+      "description": "Shadows of Self shows Mistborn’s society evolving as technology and magic mix, the economy grows, democracy contends with corruption, and religion becomes a growing cultural force, with four faiths competing for converts.\r\n\r\nThis bustling, optimistic, but still shaky society now faces its first instance of terrorism, crimes intended to stir up labor strife and religious conflict. Wax and Wayne, assisted by the lovely, brilliant Marasi, must unravel the conspiracy before civil strife stops Scadrial’s progress in its tracks.\r\n\r\nShadows of Self will give fans of The Alloy of Law everything they’ve been hoping for and, this being a Brandon Sanderson book, more, much more.",
+      "isbn": "605238283X",
+      "authors": [
+        4
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2015-01-01",
+      "page_count": 383
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 89,
+    "fields": {
+      "title": "Elantris",
+      "description": "Elantris: gigantic, beautiful, radiant-----filled with powerful individuals who use their magical abilities to benefit all the people of Arelon. Yet each of these godlike beings was once an ordinary person until touched by the mysterious transforming power of Shaod. Then, ten years ago, without warning, the magic failed. Elantrians became wizened, feeble, leper-like creatures, and Elantris itself dark, filthy, and crumbling. The Shaod became a curse.\r\n\r\nArelon's new capital city, Kae, crouches in the shadow of Elantris, which its people do their best to ignore. Princess Sarene of Teod has come to Kae for a marriage of state with Crown Prince Raoden, hoping also to find love. Sarene learns instead that Raoden has died, and she is considered his widow.\r\n\r\nBoth Teod and Arelon are under threat from the imperial ambitions of Fjordell, a city filled with ruthless religious fanatics, and whose high priest, Hrathen, intends to convert Arelon and claim it for his emperor and his god. Now Sarene alone stands in his way.\r\n\r\nBut neither Sarene nor Hrathen suspects the truth about Prince Raoden's disappearance. Taken by the same strange malady that felled the gods of Elantris, Raoden was secretly imprisoned within the dark city. His struggle to create a society for the wretches trapped there begins a series of events that will bring hope to Arelon, and reveal the secret of Elantris itself.\r\n\r\n-- From the hardback inside cover",
+      "isbn": "9788580445046",
+      "authors": [
+        4
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2005-01-01",
+      "page_count": 638
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 90,
+    "fields": {
+      "title": "Starsight",
+      "description": "**ALL HER LIFE, SPENSA'S DREAMED** of becoming a pilot. Of proving she's a hero like her father. She made it to the sky, but the truths she learned about her father were crushing. The rumors of his cowardice are true--he deserted his flight during battle against the Krell. Worse, though, he turned against his team and attacked them.\r\n\r\nSpensa is sure that there's more to the story. And she's sure that whatever happened to her father in his starship could happen to her. When she made it outside the protective shell of her planet, she heard the stars--and it was terrifying. Everything Spensa has been taught about her world is a lie.\r\n\r\nBut Spensa also discovered a few other things about herself--and she'll travel to the end of the galaxy to save humankind if she needs to.\r\n\r\nThis description comes from the publisher. *Starsight* is the second book in the Skyward series, the first of which is *Skyward*.",
+      "isbn": "0593175549",
+      "authors": [
+        4
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2019-01-01",
+      "page_count": 480
+    }
+  },
+  {
+    "model": "books.author",
+    "pk": 13,
+    "fields": {
+      "name": "Marc Hempel",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.author",
+    "pk": 14,
+    "fields": {
+      "name": "Michael Zulli",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 91,
+    "fields": {
+      "title": "Season of Mists",
+      "description": "In-depth, informative and entertaining, *The Annotated Sandman* is a fascinating look at the celebrated comic book series written by New York Times best-selling author Neil Gaiman.\r\n\r\n*The Sandman* is one of the most acclaimed titles in the history of comics. A rich blend of modern myth and dark fantasy in which contemporary fiction, historical drama and legend are seamlessly interwoven, The Sandman is also widely considered to be one of the most original and artistically ambitious comic books of the modern age. By the time it concluded in 1996, it had made significant contributions to the artistic maturity of comics as a whole and had become a pop culture phenomenon in its own right. Critics and readers alike agreed: The Sandman proved that comic books were not simply a genre but were instead a rich and unique medium combining both art and literature.\r\n\r\nNow, DC Comics is proud to present this literary classic in an all-new Annotated Edition format. Edited with notes by Leslie S. Klinger, *The Annotated Sandman* is a page-by-page, panel-by-panel journey through every installment of *The Sandman*. Using the original comic book scripts and hours of conversations with Gaiman himself, Klinger presents a wealth of commentary, references, and hidden meanings that deepen and enrich our understanding of the acclaimed series. This fourth volume, comprising issues #57-75, completes the title’s original run and features an all-new set of appendices, including a detailed chronology of the events of The Sandman and an exhaustive index of all of its unforgettable characters.",
+      "isbn": "1563891387",
+      "authors": [
+        11,
+        13,
+        14
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1991-01-01",
+      "page_count": 224
+    }
+  },
+  {
+    "model": "books.author",
+    "pk": 15,
+    "fields": {
+      "name": "Edgar Allan Poe",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 92,
+    "fields": {
+      "title": "The Raven",
+      "description": "\"The Raven\" is a narrative poem by American writer Edgar Allan Poe. First published in January 1845, the poem is often noted for its musicality, stylized language, and supernatural atmosphere. It tells of a talking raven's mysterious visit to a distraught lover, tracing the man's slow descent into madness. The poem makes use of folk, mythological, religious, and classical references. \"The Raven\" was first attributed to Poe in print in the New York Evening Mirror on January 29, 1845.",
+      "isbn": "9781979341370",
+      "authors": [
+        15
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1845-01-01",
+      "page_count": 42
+    }
+  },
+  {
+    "model": "books.author",
+    "pk": 16,
+    "fields": {
+      "name": "Kelley Jones",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.author",
+    "pk": 17,
+    "fields": {
+      "name": "Mike Dringenberg",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.author",
+    "pk": 18,
+    "fields": {
+      "name": "Kelly Jones",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 93,
+    "fields": {
+      "title": "The Doll's House",
+      "description": "New York Times best-selling author Neil Gaiman's transcendent series SANDMAN is often hailed as the definitive Vertigo title and one of the finest achievements in graphic storytelling. Gaiman created an unforgettable tale of the forces that exist beyond life and death by weaving ancient mythology, folklore and fairy tales with his own distinct narrative vision.\r\n\r\nDuring Morpheus's incarceration, three dreams escaped the Dreaming and are now loose in the waking world. At the same time, a young woman named Rose Walker is searching for her little brother. As their stories converge, a vortex is discovered that could destroy all dreamers, and the world itself. Features an introduction by Clive Barker.\r\nThis volume includes issues 9-16 of the original series and features completely new coloring, approved by the author.",
+      "isbn": "9786053756118",
+      "authors": [
+        11,
+        16,
+        17,
+        18
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1991-01-01",
+      "page_count": 232
+    }
+  },
+  {
+    "model": "books.author",
+    "pk": 19,
+    "fields": {
+      "name": "Sam Kieth",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 94,
+    "fields": {
+      "title": "Preludes & Nocturnes",
+      "description": "Preludes and Nocturnes collects the first eight issues of The Sandman comic by Neil Gaiman published by DC Vertigo. The series centers on Morpheus (Dream of the Endless). Dream is imprisoned for decades by an occultist seeking immortality. Upon escaping, he must reclaim his objects of power while still in a weakened state, confronting an addict to his dream powder, the legions of Hell, and an all-powerful madman (Doctor Destiny) in the process.",
+      "isbn": "8467491337",
+      "authors": [
+        11,
+        19
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1991-01-01",
+      "page_count": 240
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 95,
+    "fields": {
+      "title": "Complete Stories and Poems of Edgar Allan Poe",
+      "description": "67 STORIES:\r\nAngel of the Odd\r\n[Assignation](https://openlibrary.org/works/OL15645797W)\r\nBalloon-Hoax\r\n[Berenice](https://openlibrary.org/works/OL15645808W)\r\n[Black Cat](https://openlibrary.org/works/OL41068W)\r\nBon-Bon\r\nBusiness Man\r\n[Cask of Amontillado](https://openlibrary.org/works/OL41016W)\r\nColloquy of Monos and Una\r\nConversation of Eiros and Charmion\r\n[Descent into the Maelstrom](https://openlibrary.org/works/OL273476W)\r\nDevil in the Belfry\r\nDiddling\r\n[Domain of Arnheim](https://openlibrary.org/works/OL15645889W)\r\nDuc De L'Ome1ette\r\n[Eleonora](https://openlibrary.org/works/OL14937980W)\r\n[Facts in the Case of M. Valdemar](https://openlibrary.org/works/OL40987W)\r\n[Fall of the House of Usher](https://openlibrary.org/works/OL40987W)\r\nFour Beasts in One\r\nGold-Bug\r\nHop-Frog\r\nHow to Write a Blackwood Article\r\n[Imp of the Perverse](https://openlibrary.org/works/OL15481077W)\r\n[Island of the Fay](https://openlibrary.org/works/OL15645993W)\r\nKing Pest\r\n[Landor's Cottage](https://openlibrary.org/works/OL15646005W)\r\nLigeia\r\nLionizing\r\nLiterary Life of Thingum Bob, Esq.\r\nLoss of Breath\r\nMan of the Crowd\r\nMan that was Used Up\r\n[Masque of the Red Death](https://openlibrary.org/works/OL41050W)\r\nMellonta Tauta\r\n[Mesmeric Revelation](https://openlibrary.org/works/OL15646037W)\r\nMetzengerstein\r\nMorella\r\nMS. Found in a Bottle\r\nMurders in the Rue Morgue\r\nMystery of Marie Roget\r\nMystification\r\nNarrative of A. Gordon Pym of Nantucket\r\nNever Bet the Devil Your Head\r\nOblong Box\r\nOval Portrait\r\n[Pit and the Pendulum](https://openlibrary.org/works/OL273550W)\r\nPower of Words\r\nPredicament\r\n[Premature Burial](https://openlibrary.org/works/OL24583029W)\r\n[Purloined Letter](https://openlibraryorg/works/OL41065W)\r\nShadow\r\n[Silence — A Fable](https://openlibrary.org/works/OL13370628W)\r\nSome Words with a Mummy\r\nSpectacles\r\nSphinx\r\nSystem of Dr. Tart and Prof. Fether\r\nTale of Jerusalem\r\nTale of the Ragged Mountains\r\n[Tell-tale Heart](https://openlibrary.org/works/OL41059W)\r\nThou Art the Man\r\n[Thousand-and-Second Tale of Scheherazade](https://openlibrary.org/works/OL15646039W)\r\nThree Sundays in a Week\r\nUnparalleled Adventure of One Hans Pfaall\r\n[Von Kempelen and His Discovery](https://openlibrary.org/works/OL25111544W)\r\nWhy the Little Frenchman Wears His Hand in a Sling\r\n[William Wilson](https://openlibrary.org/works/OL16088822W)\r\nX-ing a Paragrab\r\n\r\n55 POEMS:",
+      "isbn": "9781840220520",
+      "authors": [
+        15
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1966-01-01",
+      "page_count": 819
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 96,
+    "fields": {
+      "title": "The Graveyard Book",
+      "description": "Bod is an unusual boy who inhabits an unusual place—he's the only living resident of a graveyard. Raised from infancy by the ghosts, werewolves, and other cemetery denizens, Bod has learned the antiquated customs of his guardians' time as well as their ghostly teachings—such as the ability to Fade so mere mortals cannot see him.\r\n\r\nCan a boy raised by ghosts face the wonders and terrors of the worlds of both the living and the dead?\r\n\r\nThe Graveyard Book is the winner of the Newbery Medal, the Carnegie Medal, the Hugo Award for best novel, the Locus Award for Young Adult novel, the American Bookseller Association’s “Best Indie Young Adult Buzz Book,” a Horn Book Honor, and Audio Book of the Year.",
+      "isbn": "9780062364463",
+      "authors": [
+        11
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2008-01-01",
+      "page_count": 304
+    }
+  },
+  {
+    "model": "books.author",
+    "pk": 20,
+    "fields": {
+      "name": "Anna Llisterri",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 97,
+    "fields": {
+      "title": "Norse Mythology",
+      "description": "Neil Gaiman has long been inspired by ancient mythology in creating the fantastical realms of his fiction. Now he turns his attention back to the source, presenting a bravura rendition of the great northern tales.\r\n\r\nIn Norse Mythology, Gaiman stays true to the myths in envisioning the major Norse pantheon: Odin, the highest of the high, wise, daring, and cunning; Thor, Odin’s son, incredibly strong yet not the wisest of gods; and Loki―son of a giant―blood brother to Odin and a trickster and unsurpassable manipulator.\r\n\r\nGaiman fashions these primeval stories into a novelistic arc that begins with the genesis of the legendary nine worlds and delves into the exploits of deities, dwarfs, and giants. Once, when Thor’s hammer is stolen, Thor must disguise himself as a woman―difficult with his beard and huge appetite―to steal it back. More poignant is the tale in which the blood of Kvasir―the most sagacious of gods―is turned into a mead that infuses drinkers with poetry. The work culminates in Ragnarok, the twilight of the gods and rebirth of a new time and people.\r\n\r\nThrough Gaiman’s deft and witty prose emerge these gods with their fiercely competitive natures, their susceptibility to being duped and to duping others, and their tendency to let passion ignite their actions, making these long-ago myths breathe pungent life again.",
+      "isbn": "1408886804",
+      "authors": [
+        11,
+        20
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "2016-01-01",
+      "page_count": 304
+    }
+  },
+  {
+    "model": "books.author",
+    "pk": 21,
+    "fields": {
+      "name": "Jill Thompson",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.author",
+    "pk": 22,
+    "fields": {
+      "name": "Bryan Talbot",
+      "bio": "",
+      "website": "",
+      "created_at": "2026-03-16T21:22:42.320203+00:00"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 98,
+    "fields": {
+      "title": "Dream Country",
+      "description": "Presents four Sandman stories, including \"A Midsummer Night's Dream,\" in which Shakespeare's company, at the instigation of the Lord of Dreams, gives an open-air performance of the play to an audience of fairies.",
+      "isbn": "8685489032",
+      "authors": [
+        11,
+        21,
+        22
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1991-01-01",
+      "page_count": 160
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 99,
+    "fields": {
+      "title": "Brief Lives",
+      "description": "An attempt to summon and imprison Death, results, instead, in the capture of Morpheus, the Sandman, who must regain the tools of his powers.",
+      "isbn": "1401232639",
+      "authors": [
+        11
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1994-01-01",
+      "page_count": 256
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 100,
+    "fields": {
+      "title": "Fables & Reflections",
+      "description": "Continues the epic of Morpheus, the King of Dreams, as he observes and interacts with an odd assortment of historical and fictional characters throughout time.",
+      "isbn": "1417686154",
+      "authors": [
+        11
+      ],
+      "genre": "fantasy",
+      "language": "en",
+      "created_at": "2026-03-16T21:22:42.320203+00:00",
+      "updated_at": "2026-03-16T21:22:42.320203+00:00",
+      "publication_date": "1993-01-01",
+      "page_count": 263
+    }
+  }
+]

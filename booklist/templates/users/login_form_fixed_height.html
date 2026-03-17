@@ -1,0 +1,32 @@
+<!-- Alternative login form with fixed-height error area -->
+<form hx-post="{% url 'users:login' %}"
+      hx-target="#user-section"
+      hx-swap="outerHTML"
+      class="px-3 py-2">
+    {% csrf_token %}
+
+    <!-- Fixed height error area to prevent layout shift -->
+    <div class="mb-2" style="height: 32px;">
+        {% if error %}
+            <div class="alert alert-danger alert-sm mb-0 py-1" role="alert" style="font-size: 0.75rem;">
+                {{ error }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="mb-2">
+        <label for="username" class="form-label small">Username</label>
+        <input type="text" class="form-control form-control-sm" name="username" id="username" required>
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label small">Password</label>
+        <input type="password" class="form-control form-control-sm" name="password" id="password" required>
+    </div>
+    <div class="d-grid gap-2 mb-2">
+        <button type="submit" class="btn btn-primary btn-sm">Log In</button>
+    </div>
+    <hr class="my-2">
+    <div class="text-center">
+        <a href="{% url 'users:register' %}" class="btn btn-link btn-sm p-0">Create Account</a>
+    </div>
+</form>

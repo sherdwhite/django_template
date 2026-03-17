@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">🔐 Two-Factor Authentication</h2>
+
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+                    <div class="alert alert-success" role="alert">
+                        <h5>✅ Two-Factor Authentication Active</h5>
+                        <p>Your account is protected with email-based two-factor authentication.</p>
+                        <p><strong>Current 2FA Email:</strong> {{ current_2fa_email }}</p>
+                        <p class="small text-muted">Two-factor authentication is required for all accounts and cannot be disabled.</p>
+                    </div>
+
+                    <!-- Email Update Section -->
+                    <div class="card mt-4">
+                        <div class="card-header">
+                            <h5 class="mb-0">📧 Update 2FA Email Address</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted">You can update the email address used for two-factor authentication codes.</p>
+
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="mb-3">
+                                    <label for="new_email" class="form-label">New 2FA Email Address</label>
+                                    <input type="email" class="form-control" id="new_email" name="new_email"
+                                           value="{{ current_2fa_email }}" required>
+                                    <div class="form-text">We'll send verification codes to this email address.</div>
+                                </div>
+
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="update_account_email"
+                                           name="update_account_email">
+                                    <label class="form-check-label" for="update_account_email">
+                                        Also update my account email address
+                                    </label>
+                                    <div class="form-text">Your current account email: {{ user_email }}</div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">
+                                    📧 Update Email Address
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Security Information -->
+                    <div class="card mt-4">
+                        <div class="card-header">
+                            <h6 class="mb-0">🔒 Security Information</h6>
+                        </div>
+                        <div class="card-body">
+                            <h6>How 2FA works:</h6>
+                            <ol>
+                                <li>Enter your username and password as usual</li>
+                                <li>We'll send a 6-digit code to your 2FA email address</li>
+                                <li>Enter the code to complete your login</li>
+                            </ol>
+                            <p class="small text-muted mt-3">
+                                <strong>Security Note:</strong> Two-factor authentication is mandatory for all accounts
+                                and helps protect your account even if your password is compromised.
+                            </p>
+                        </div>
+                    </div>
+
+                    <hr class="mt-4">
+                    <div class="text-center">
+                        <a href="{% url 'index' %}" class="btn btn-secondary">← Back to Books</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

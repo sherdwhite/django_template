@@ -1,0 +1,48 @@
+# docker-compose.override.yml (automatically loaded by docker-compose)
+# This file provides development-specific overrides for the base docker-compose.yml
+# Benefits: Live code reloading, exposed ports for debugging, development optimizations
+
+version: '3.8'
+
+services:
+  booklist:
+    # Mount source code for live reloading during development
+    # Benefits: Code changes reflect immediately without rebuilding containers
+    volumes:
+      - ./booklist:/booklist
+      # Exclude pycache from sync for better performance
+      - /booklist/__pycache__
+
+    # Override command for development server with auto-reload
+    # Benefits: Automatic restart on code changes, debug-friendly server
+    command: python manage.py runserver 0.0.0.0:8000
+
+    # Development-specific environment variables
+    environment:
+      - DJANGO_DEBUG=True
+      - DJANGO_SETTINGS_MODULE=core.settings
+
+  db:
+    # Expose database port for direct access from host
+    # Benefits: Connect with database clients, debugging, data inspection
+    ports:
+      - "5432:5432" # Expose DB port for local access
+
+  # Development tools container (optional, use with --profile tools)
+  # Usage: docker-compose --profile tools up -d tools
+  tools:
+    build:
+      context: ./booklist
+      dockerfile: Dockerfile
+    command: tail -f /dev/null # Keep container running for manual commands
+    volumes:
+      - .:/workspace # Full workspace access
+      - ./booklist:/booklist
+    environment:
+      - DJANGO_SETTINGS_MODULE=core.settings
+      - DJANGO_DEBUG=True
+    depends_on:
+      db:
+        condition: service_healthy
+    profiles:
+      - tools # Only starts when explicitly requested

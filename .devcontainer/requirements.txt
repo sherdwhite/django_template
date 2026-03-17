@@ -1,0 +1,15 @@
+autoflake
+black
+debugpy
+django-debug-toolbar
+django-stubs
+Django==6.0.3
+django-otp==1.7.0
+djangorestframework==3.16.1
+flake8
+Pillow==12.1.1
+psycopg[binary]==3.3.3
+pytest
+pytest-cov
+pytest-django
+uvicorn==0.41.0

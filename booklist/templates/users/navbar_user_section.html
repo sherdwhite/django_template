@@ -1,0 +1,35 @@
+<!-- User section for navbar - shows login dropdown or welcome message -->
+<div id="user-section" class="dropdown">
+    {% if user.is_authenticated %}
+        <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Welcome, {{ user.first_name|default:user.username }}
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+            <li><h6 class="dropdown-header">{{ user.username }}</h6></li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+                <a class="dropdown-item" href="{% url 'users:2fa:setup' %}">
+                    🔐 Two-Factor Auth
+                </a>
+            </li>
+            <li>
+                <form hx-post="{% url 'users:logout' %}"
+                      hx-target="#user-section"
+                      hx-swap="outerHTML"
+                      style="margin: 0;">
+                    {% csrf_token %}
+                    <button type="submit" class="dropdown-item" style="border: none; background: none; width: 100%; text-align: left;">
+                        Log Out
+                    </button>
+                </form>
+            </li>
+        </ul>
+    {% else %}
+        <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            Log In
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" style="min-width: 250px;">
+            {% include 'users/login_form.html' %}
+        </div>
+    {% endif %}
+</div>

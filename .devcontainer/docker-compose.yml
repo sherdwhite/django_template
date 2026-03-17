@@ -1,0 +1,98 @@
+# Dev Container Docker Compose Configuration
+# This file is specifically for VS Code DevContainer development
+# Benefits: Isolated development environment, consistent tooling, no local dependencies
+
+version: '3.8'
+
+services:
+  booklist:
+    # Development server configuration
+    # Benefits: Live code editing, debugging support, VS Code integration
+    ports:
+      - "8000:8000" # Django development server
+    environment:
+      # Database connection for dev container
+      DB_ENGINE: django.db.backends.postgresql
+      DB_USER: postgres
+      DB_NAME: postgres
+      DB_HOST: db
+      DB_PASSWORD: dbpassword
+      # Python optimization for development
+      PYTHONDONTWRITEBYTECODE: 1
+      PYTHONUNBUFFERED: 1
+      # Static files served by nginx from this shared volume
+      STATIC_ROOT: /static
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    # Override the entrypoint to prevent automatic Django server startup
+    # Benefits: VS Code controls the Django server, better debugging experience
+    entrypoint: []
+    # Keep container running for development
+    # Benefits: Container stays alive for VS Code commands and debugging
+    command: tail -f /dev/null
+    volumes:
+      # Mount workspace for live code editing
+      # Benefits: Code changes sync immediately, no container rebuilds
+      - ..:/workspace:cached
+      # Persist Python packages across container rebuilds
+      # Benefits: Faster container startup, preserved pip cache
+      - booklist-pip-cache:/home/appuser/.cache/pip
+      - static:/static
+    depends_on:
+      - db
+    networks:
+      - booklist-network
+
+  db:
+    # PostgreSQL database for development
+    # Benefits: Matches production database, isolated data
+    image: postgres:17-alpine
+    restart: unless-stopped
+    ports:
+      # Use port 5433 to avoid conflicts with host PostgreSQL
+      # Benefits: Allows running both dev container and host postgres simultaneously
+      - "5433:5432"
+    environment:
+      # Development database configuration
+      # Note: Using simple password for development convenience
+      POSTGRES_PASSWORD: dbpassword
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      # Persist database data across container restarts
+      # Benefits: Data survives container rebuilds, faster development
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - booklist-network
+  nginx:
+    # Nginx reverse proxy for development
+    # Benefits: Matches production setup, static file serving, load balancing testing
+    build:
+      context: ../nginx
+      dockerfile: ./Dockerfile
+    depends_on:
+      - booklist
+      - db
+    ports:
+      - "80:80" # Web server port
+    volumes:
+      # Access workspace for configuration changes
+      - ..:/workspace:cached
+      - static:/static
+    networks:
+      - booklist-network
+
+volumes:
+  # Persistent storage for development
+  postgres-data: # Database data persistence
+  booklist-pip-cache: # Python package cache
+  static:
+    # Django static files
+
+networks:
+  # Isolated network for dev container services
+  # Benefits: Service discovery, network isolation, security
+  booklist-network:
+    driver: bridge

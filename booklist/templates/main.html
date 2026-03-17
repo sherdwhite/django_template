@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container mt-4">
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h1 class="display-4 fw-bold text-primary mb-3">Welcome to Book List</h1>
+                <p class="lead mb-4">Browse and discover books.</p>
+                <a href="{% url 'books:book_list' %}" class="btn btn-primary btn-lg">
+                    Browse Books
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

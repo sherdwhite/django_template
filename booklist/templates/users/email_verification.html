@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">📧 Verify Your Email</h2>
+
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+                    <div class="alert alert-info" role="alert">
+                        <h6>Almost there! 🎉</h6>
+                        <p class="mb-2">We've sent a 6-digit verification code to:</p>
+                        <p class="mb-0"><strong>{{ email }}</strong></p>
+                    </div>
+
+                    <form method="post" action="{% url 'users:verify_email' %}">
+                        {% csrf_token %}
+
+                        <div class="mb-3">
+                            <label for="code" class="form-label">Verification Code</label>
+                            <input type="text"
+                                   class="form-control text-center"
+                                   name="code"
+                                   id="code"
+                                   placeholder="Enter 6-digit code"
+                                   maxlength="6"
+                                   required
+                                   autocomplete="off"
+                                   style="font-size: 1.2rem; letter-spacing: 0.2rem;">
+                            <div class="form-text">
+                                Enter the verification code we sent to your email address.
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2 mb-3">
+                            <button type="submit" class="btn btn-primary">
+                                ✅ Verify Email & Complete Registration
+                            </button>
+                        </div>
+                    </form>
+
+                    {% if show_resend %}
+                    <div class="text-center">
+                        <form method="post" action="{% url 'users:resend_verification' %}" style="display: inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-link btn-sm">
+                                📤 Resend Verification Code
+                            </button>
+                        </form>
+                    </div>
+                    {% endif %}
+
+                    <hr class="mt-4">
+
+                    <div class="text-center">
+                        <small class="text-muted">
+                            🔒 Once verified, two-factor authentication will be automatically enabled for your account security.
+                        </small>
+                    </div>
+
+                    <div class="text-center mt-3">
+                        <a href="{% url 'users:register' %}" class="btn btn-outline-secondary btn-sm">
+                            ← Back to Registration
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Auto-focus the code input and format input
+document.addEventListener('DOMContentLoaded', function() {
+    const codeInput = document.getElementById('code');
+    if (codeInput) {
+        codeInput.focus();
+
+        codeInput.addEventListener('input', function(e) {
+            // Remove any non-numeric characters
+            e.target.value = e.target.value.replace(/\D/g, '');
+
+            // Auto-submit when 6 digits are entered
+            if (e.target.value.length === 6) {
+                // Small delay to let user see the complete code
+                setTimeout(() => {
+                    e.target.closest('form').submit();
+                }, 500);
+            }
+        });
+
+        // Add paste support for verification codes
+        codeInput.addEventListener('paste', function(e) {
+            e.preventDefault();
+            const paste = (e.clipboardData || window.clipboardData).getData('text');
+            const numericPaste = paste.replace(/\D/g, '').substring(0, 6);
+            e.target.value = numericPaste;
+
+            if (numericPaste.length === 6) {
+                setTimeout(() => {
+                    e.target.closest('form').submit();
+                }, 500);
+            }
+        });
+    }
+});
+</script>
+{% endblock %}

@@ -1,0 +1,39 @@
+# Production override for docker-compose
+# Usage: docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
+# IMPORTANT: Configure environment variables in .env.production (see .env.production.example)
+version: '3.8'
+services:
+  booklist:
+    environment:
+      # Production database settings with larger connection pool
+      - DJANGO_ENV=production
+      - DB_CONN_MAX_AGE=3600 # Keep connections alive for 1 hour in production
+      - DEBUG=False
+    # Add health check for production
+    healthcheck:
+      test: [ "CMD", "python", "manage.py", "check", "--database", "default" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  db:
+    environment:
+      # Secure database setup for production - use environment variables
+      # Set POSTGRES_PASSWORD in your environment or .env.production file
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-changeme}
+      - POSTGRES_HOST_AUTH_METHOD=md5
+    # Add production-optimized health check for database
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+# Production volumes configuration
+volumes:
+  postgres_data:
+  static:

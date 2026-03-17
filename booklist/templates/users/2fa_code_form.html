@@ -1,0 +1,80 @@
+<!-- 2FA Code Entry Form for dropdown -->
+<form hx-post="{% url 'users:2fa:verify_code' %}"
+      hx-target="closest .dropdown-menu"
+      hx-swap="innerHTML"
+      class="px-3 py-2">
+    {% csrf_token %}
+
+    <div class="mb-3 text-center">
+        <h6 class="text-primary mb-2">📧 Check Your Email</h6>
+        <p class="small text-muted mb-3">
+            We sent a verification code to:<br>
+            <strong>{{ email }}</strong>
+        </p>
+    </div>
+
+    <div class="mb-3">
+        <label for="code" class="form-label small">Verification Code</label>
+        <input type="text"
+               class="form-control form-control-sm {% if error %}is-invalid{% endif %}"
+               name="code"
+               id="code"
+               placeholder="Enter 6-digit code"
+               maxlength="6"
+               required
+               autocomplete="off">
+        {% if error %}
+            <div class="invalid-feedback" style="font-size: 0.75rem;">
+                {{ error }}
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="d-grid gap-2 mb-2">
+        <button type="submit" class="btn btn-primary btn-sm">Verify Code</button>
+    </div>
+
+    {% if show_resend %}
+    <div class="text-center mb-2">
+        <button type="button"
+                class="btn btn-link btn-sm p-0"
+                hx-post="{% url 'users:login' %}"
+                hx-target="closest .dropdown-menu"
+                hx-swap="innerHTML"
+                style="font-size: 0.75rem;">
+            Resend Code
+        </button>
+    </div>
+    {% endif %}
+
+    <hr class="my-2">
+    <div class="text-center">
+        <button type="button"
+                class="btn btn-link btn-sm p-0"
+                hx-get="{% url 'users:login_form_partial' %}"
+                hx-target="closest .dropdown-menu"
+                hx-swap="innerHTML"
+                style="font-size: 0.75rem;">
+            ← Back to Login
+        </button>
+    </div>
+</form>
+
+<script>
+// Auto-focus the code input and auto-submit when 6 digits are entered
+document.addEventListener('DOMContentLoaded', function() {
+    const codeInput = document.getElementById('code');
+    if (codeInput) {
+        codeInput.focus();
+        codeInput.addEventListener('input', function(e) {
+            // Remove any non-numeric characters
+            e.target.value = e.target.value.replace(/\D/g, '');
+
+            // Auto-submit when 6 digits are entered
+            if (e.target.value.length === 6) {
+                e.target.closest('form').submit();
+            }
+        });
+    }
+});
+</script>
