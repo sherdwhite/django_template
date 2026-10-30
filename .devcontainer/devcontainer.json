@@ -13,16 +13,20 @@
 		"ghcr.io/devcontainers/features/git:1": {},
 		"ghcr.io/devcontainers/features/github-cli:1": {}
 	},
-	// Use port 5433 for PostgreSQL instead of default 5432 to avoid conflicts
+	// Use port 5433 for PostgreSQL and 8080 for Nginx to avoid conflicts
 	// with the main docker-compose.yml setup, allowing both to run simultaneously
 	"forwardPorts": [
 		8000,
+		8080,
 		5433
 	],
 	"portsAttributes": {
 		"8000": {
 			"label": "Django Dev Server",
 			"onAutoForward": "notify"
+		},
+		"8080": {
+			"label": "Nginx Web Server"
 		},
 		"5433": {
 			"label": "PostgreSQL"
@@ -35,10 +39,7 @@
 			"settings": {
 				// Modern Python settings
 				"python.defaultInterpreterPath": "/usr/local/bin/python",
-				"python.linting.enabled": true,
-				"python.linting.pylintEnabled": false,
-				"python.linting.flake8Enabled": true,
-				"python.linting.flake8Args": [
+				"flake8.args": [
 					"--ignore=E501",
 					"--exclude=venv,migrations,__pycache__,static"
 				],
@@ -101,6 +102,7 @@
 				"ms-python.python",
 				"ms-python.debugpy",
 				"ms-python.black-formatter",
+				"ms-python.flake8",
 				"ms-python.isort",
 				"batisteo.vscode-django",
 				"eamodio.gitlens",

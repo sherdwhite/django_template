@@ -1,24 +1,42 @@
-# Static Files and CSS Framework Guide
+# Static Files and Media Guide
 
-This document explains how static files are handled in the Book List project.
+This document explains how static assets and user-uploaded media files are handled in the BookList project.
 
 ## Current Setup
 
-The project uses **Bootstrap 5.3.3 via CDN** for CSS framework functionality.
+- **Frontend Styling**: Bootstrap 5.3.3 via CDN with custom overrides in `booklist/static/css/custom.css`.
+- **Static File Serving**: Served directly by **Nginx** via shared Docker volume in production / docker-compose, bypassing Django worker processes.
+- **Media File Serving**: Uploaded media (book covers, user avatars) stored in a shared persistent volume and served by Nginx (in production) or Django `urlpatterns` (when `DEBUG=True` in local development).
 
-## Static Files Configuration
+---
 
-Django static files are configured in `booklist/settings.py`:
+## Django Configuration
+
+Static and media files are configured in `booklist/core/settings.py`:
 
 ```python
-STATIC_URL = "static/"
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = "/static/"
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = Path(os.environ.get("STATIC_ROOT", BASE_DIR / "staticfiles"))
+
+# Media files (user uploads: avatars, book covers, etc.)
+MEDIA_URL = os.environ.get("MEDIA_URL", "/media/")
+MEDIA_ROOT = Path(os.environ.get("MEDIA_ROOT", BASE_DIR / "media"))
 ```
 
-### Directory Structure
+In `booklist/core/urls.py`, local development media serving is enabled during `DEBUG`:
+
+```python
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+```
+
+---
+
+## Directory Structure
 
 ```
 booklist/
@@ -27,16 +45,54 @@ booklist/
 │   │   └── custom.css     # Project-specific styles
 │   ├── js/                # Custom JavaScript files
 │   └── images/            # Project images
-└── staticfiles/           # Collected static files (production)
-    ├── admin/             # Django admin static files
-    ├── rest_framework/    # DRF static files
-    └── css/               # Collected custom CSS
-        └── custom.css
+├── staticfiles/           # Local collected static files (when running without Docker)
+│   ├── admin/             # Django admin static files
+│   ├── rest_framework/    # DRF static files
+│   └── css/               # Collected custom CSS
+└── media/                 # Local uploaded files (when running without Docker)
 ```
+
+---
+
+## Docker & Production Architecture
+
+In containerized environments (both Docker Compose and DevContainer):
+
+1. **Volume Mounts**:
+   - `static`: Shared volume mounted at `/static` in both Django and Nginx.
+   - `media_data`: Shared persistent volume mounted at `/media` in both Django and Nginx.
+
+2. **Build Time**:
+   - During `docker build`, the `Dockerfile` pre-creates `/static` and `/media` with non-root `appuser` ownership.
+   - Runs `python manage.py collectstatic --noinput` to populate `/static`.
+
+3. **Nginx Reverse Proxy**:
+   Nginx serves both locations directly for maximum throughput and minimal backend load:
+   ```nginx
+   # Static assets (1 year immutable cache)
+   location /static/ {
+       alias /static/;
+       expires 1y;
+       add_header Cache-Control "public, immutable";
+       access_log off;
+       log_not_found off;
+   }
+
+   # User uploads (1 year cache)
+   location /media/ {
+       alias /media/;
+       expires 1y;
+       add_header Cache-Control "public";
+       access_log off;
+       log_not_found off;
+   }
+   ```
+
+---
 
 ## Bootstrap Integration
 
-### CDN Implementation (Current)
+### CDN Implementation (Default)
 
 Bootstrap is loaded from CDN in `templates/base.html`:
 
@@ -56,13 +112,14 @@ Bootstrap is loaded from CDN in `templates/base.html`:
         crossorigin="anonymous"></script>
 ```
 
+---
+
 ## Custom Styles
 
 Project-specific styles are defined in `booklist/static/css/custom.css`. This file:
-- Loads after Bootstrap CSS (allowing overrides)
-- Contains custom component styles
-- Includes responsive adjustments
-- Follows Bootstrap's CSS custom property patterns
+- Loads after Bootstrap CSS (allowing overrides).
+- Contains custom component styles.
+- Follows Bootstrap's CSS custom property patterns.
 
 Example custom styles:
 ```css
@@ -79,45 +136,19 @@ Example custom styles:
 }
 ```
 
-## Production Considerations
+---
 
-### Static File Collection
+## Manual Collection & Commands
 
-For production deployment, collect static files:
+To manually collect static files:
+
 ```bash
+# Using Makefile
+make collectstatic
+
+# Using Docker Compose directly
+docker compose exec booklist python manage.py collectstatic --noinput
+
+# In local Python environment
 python manage.py collectstatic --noinput
 ```
-
-This copies custom CSS and other static files from `STATICFILES_DIRS` to `STATIC_ROOT` for serving by the web server.
-
-### Content Security Policy (CSP)
-
-When using CDN resources, consider implementing CSP headers that allow Bootstrap CDN:
-```
-Content-Security-Policy: style-src 'self' https://cdn.jsdelivr.net; script-src 'self' https://cdn.jsdelivr.net
-```
-
-## Alternative: Local Bootstrap Files
-
-If you need to use local Bootstrap files (for offline development or security requirements):
-
-1. **Download Bootstrap:**
-   ```bash
-   # Download and extract to booklist/static/vendor/bootstrap/
-   mkdir -p booklist/static/vendor/bootstrap
-   # Place bootstrap.min.css and bootstrap.bundle.min.js in respective css/ and js/ folders
-   ```
-
-2. **Update templates/base.html:**
-   ```html
-   <!-- Replace CDN links with: -->
-   <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
-   <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-   ```
-
-3. **Run collectstatic for production:**
-   ```bash
-   python manage.py collectstatic
-   ```
-
-**Note:** CDN approach avoids local file management.

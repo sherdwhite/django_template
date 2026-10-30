@@ -1,12 +1,21 @@
 version: '3.8'
+
+x-logging: &default-logging
+  driver: "json-file"
+  options:
+    max-size: "20m"
+    max-file: "5"
+
 services:
   booklist:
     build:
       context: ./booklist
-    ports:
-      - 8000:8000
+    restart: unless-stopped
+    expose:
+      - "8000"
     volumes:
       - static:/static
+      - media_data:/media
     environment:
       # Database settings for connection pooling
       - DB_NAME=postgres
@@ -17,9 +26,18 @@ services:
       - DB_CONN_MAX_AGE=600
       # Set to 'production' for production-level connection pooling
       - DJANGO_ENV=development
+      - STATIC_ROOT=/static
+      - MEDIA_ROOT=/media
+      - REDIS_URL=redis://redis:6379/1
     depends_on:
       db:
         condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - frontend_net
+      - backend_net
+    logging: *default-logging
     # Health check to monitor Django application
     # Benefits: Automatic restart on failure, better orchestration
     healthcheck:
@@ -28,16 +46,22 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
+
   nginx:
     build:
       context: ./nginx
+    restart: unless-stopped
     volumes:
       - static:/static
+      - media_data:/media
     ports:
       - "80:80"
     depends_on:
-      - booklist
-      - db
+      booklist:
+        condition: service_healthy
+    networks:
+      - frontend_net
+    logging: *default-logging
     # Health check for nginx service
     # Benefits: Ensures web server is responding to requests
     healthcheck:
@@ -45,12 +69,17 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
+
   db:
     image: postgres:17-alpine
+    restart: unless-stopped
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
       - "POSTGRES_HOST_AUTH_METHOD=trust"
+    networks:
+      - backend_net
+    logging: *default-logging
     # Health check to monitor PostgreSQL database
     # Benefits: Ensures database is ready before starting dependent services
     healthcheck:
@@ -58,14 +87,37 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    volumes:
+      - redis_data:/data
+    networks:
+      - backend_net
+    logging: *default-logging
+    # Health check to monitor Redis service
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
   # tests:
   #   build: .
   #   volumes:
   #     - .:/workspace/
   #   entrypoint: /usr/local/bin/python3.12
   #   command: manage.py test
+
 volumes:
   postgres_data:
   static:
+  media_data:
+  redis_data:
 
-
+networks:
+  frontend_net:
+    driver: bridge
+  backend_net:
+    driver: bridge

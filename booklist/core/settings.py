@@ -20,19 +20,46 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
+# Environment configuration
+DJANGO_ENV = os.environ.get("DJANGO_ENV", "development").lower()
+IS_PRODUCTION = DJANGO_ENV == "production"
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get(
     "DJANGO_SECRET_KEY",
     "django-insecure-ea&fc43ud#^7e_^&p9=@y7(_6fm-a$_)lu!^hil@^d(g7k2u3m",
 )
+if IS_PRODUCTION and SECRET_KEY.startswith("django-insecure-"):
+    import warnings
+
+    warnings.warn(
+        "DJANGO_SECRET_KEY is using an insecure default in production! "
+        "Set DJANGO_SECRET_KEY in your environment or .env.production file.",
+        RuntimeWarning,
+    )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DJANGO_DEBUG", "True").lower() in ("true", "1", "yes")
+default_debug = "False" if IS_PRODUCTION else "True"
+debug_val = os.environ.get("DJANGO_DEBUG", os.environ.get("DEBUG", default_debug))
+DEBUG = debug_val.lower() in ("true", "1", "yes")
 
 # Parse ALLOWED_HOSTS from environment variable
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "*").split(",")
 if ALLOWED_HOSTS == [""]:
     ALLOWED_HOSTS = ["*"]
+
+# Security and reverse proxy headers
+if IS_PRODUCTION or os.environ.get("SECURE_PROXY_SSL_HEADER"):
+    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
+SECURE_SSL_REDIRECT = os.environ.get("SECURE_SSL_REDIRECT", "False").lower() in (
+    "true",
+    "1",
+    "yes",
+)
+if IS_PRODUCTION and SECURE_SSL_REDIRECT:
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
 # Application definition
 
@@ -88,58 +115,46 @@ WSGI_APPLICATION = "core.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
-
-# Override with PostgreSQL if available
 if os.environ.get("DB_HOST"):
-    try:
-        import psycopg
-
-        # Quick test
-        conn = psycopg.connect(
-            host=os.environ.get("DB_HOST", "db"),
-            dbname=os.environ.get("DB_NAME", "postgres"),
-            user=os.environ.get("DB_USER", "postgres"),
-            password=os.environ.get("DB_PASSWORD", "dbpassword"),
-            connect_timeout=2,
-        )
-        conn.close()
-
-        # If we get here, PostgreSQL is working
-        # Environment-specific connection pooling settings
-        if os.environ.get("DJANGO_ENV") == "production":
-            # Production settings (larger pool for production workloads)
-            conn_max_age = int(os.environ.get("DB_CONN_MAX_AGE", "600"))
-            connect_timeout = int(os.environ.get("DB_CONNECT_TIMEOUT", "30"))
-        else:
-            # Development settings (smaller pool for local development)
-            conn_max_age = int(os.environ.get("DB_CONN_MAX_AGE", "300"))
-            connect_timeout = int(os.environ.get("DB_CONNECT_TIMEOUT", "10"))
-
-        DATABASES = {
-            "default": {
-                "ENGINE": "django.db.backends.postgresql",
-                "NAME": os.environ.get("DB_NAME", "postgres"),
-                "USER": os.environ.get("DB_USER", "postgres"),
-                "PASSWORD": os.environ.get("DB_PASSWORD", "dbpassword"),
-                "HOST": os.environ.get("DB_HOST", "db"),
-                "PORT": os.environ.get("DB_PORT", "5432"),
-                "OPTIONS": {
-                    "connect_timeout": connect_timeout,
-                },
-                # Connection pooling
-                "CONN_MAX_AGE": conn_max_age,
-                "CONN_HEALTH_CHECKS": True,
-            }
+    conn_max_age = int(
+        os.environ.get("DB_CONN_MAX_AGE", "600" if IS_PRODUCTION else "300")
+    )
+    connect_timeout = int(
+        os.environ.get("DB_CONNECT_TIMEOUT", "30" if IS_PRODUCTION else "10")
+    )
+    DATABASES = {
+        "default": {
+            "ENGINE": os.environ.get(
+                "DB_ENGINE", "django.db.backends.postgresql"
+            ),
+            "NAME": os.environ.get("DB_NAME", "postgres"),
+            "USER": os.environ.get("DB_USER", "postgres"),
+            "PASSWORD": os.environ.get(
+                "DB_PASSWORD",
+                os.environ.get("POSTGRES_PASSWORD", "postgres"),
+            ),
+            "HOST": os.environ.get("DB_HOST", "db"),
+            "PORT": os.environ.get("DB_PORT", "5432"),
+            "OPTIONS": {
+                "connect_timeout": connect_timeout,
+            },
+            # Connection pooling / persistent connections
+            "CONN_MAX_AGE": conn_max_age,
+            "CONN_HEALTH_CHECKS": True,
         }
-
-    except Exception:
-        pass  # Keep SQLite
+    }
+elif IS_PRODUCTION:
+    raise RuntimeError(
+        "Production environment requires DB_HOST to be set for PostgreSQL. "
+        "Silent fallback to SQLite is disabled in production."
+    )
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
 
 
 # Password validation
@@ -184,6 +199,32 @@ STATICFILES_DIRS = [
 # Static files collection directory (required for collectstatic)
 # Set STATIC_ROOT env var to /static/ in Docker where nginx serves from a shared volume.
 STATIC_ROOT = Path(os.environ.get("STATIC_ROOT", BASE_DIR / "staticfiles"))
+
+# Media files (user uploads: avatars, book covers, etc.)
+# https://docs.djangoproject.com/en/6.0/topics/files/
+MEDIA_URL = os.environ.get("MEDIA_URL", "/media/")
+MEDIA_ROOT = Path(os.environ.get("MEDIA_ROOT", BASE_DIR / "media"))
+
+# Cache & Session configuration
+# In production / docker, offload sessions and caching to Redis for high concurrency
+REDIS_URL = os.environ.get("REDIS_URL", os.environ.get("CACHE_URL"))
+if REDIS_URL:
+    CACHES = {
+        "default": {
+            "BACKEND": "django.core.cache.backends.redis.RedisCache",
+            "LOCATION": REDIS_URL,
+        }
+    }
+    # Offload sessions to Redis to eliminate database lock contention under heavy concurrency
+    SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+    SESSION_CACHE_ALIAS = "default"
+else:
+    CACHES = {
+        "default": {
+            "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+            "LOCATION": "booklist-local-cache",
+        }
+    }
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/6.0/ref/settings/#default-auto-field

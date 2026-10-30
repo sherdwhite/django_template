@@ -10,6 +10,10 @@ ENV PYTHONUNBUFFERED=1
 ENV PYTHONPATH=/workspace/booklist/
 ENV DJANGO_SETTINGS_MODULE=core.settings
 ENV DEBUG=True
+ENV DJANGO_DEBUG=True
+ENV DJANGO_ENV=development
+ENV STATIC_ROOT=/static
+ENV MEDIA_ROOT=/media
 
 # Create a non-root user that matches common Linux host UIDs
 # This prevents permission issues on Linux systems (especially Fedora/RHEL)
@@ -34,13 +38,13 @@ RUN pip install --no-cache-dir -r /tmp/requirements.txt && rm /tmp/requirements.
 # Pre-create VS Code server directories with correct ownership
 # This prevents permission errors when VS Code tries to create these as appuser
 RUN mkdir -p /home/appuser/.vscode-server/bin \
-    /home/appuser/.vscode-server/data/Machine \
-    /home/appuser/.vscode-server/extensions \
+             /home/appuser/.vscode-server/data/Machine \
+             /home/appuser/.vscode-server/extensions \
     && chown -R appuser:appuser /home/appuser/.vscode-server
 
-# Pre-create the static volume mount point with correct ownership
-# This allows collectstatic to write to the shared Docker volume
-RUN mkdir -p /static && chown appuser:appuser /static
+# Pre-create the static and media volume mount points with correct ownership
+# This allows collectstatic and file uploads to write to the shared Docker volume
+RUN mkdir -p /static /media && chown -R appuser:appuser /static /media
 
 # Set working directory
 WORKDIR /workspace/booklist

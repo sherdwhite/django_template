@@ -2,13 +2,43 @@
 # Usage: docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
 # IMPORTANT: Configure environment variables in .env.production (see .env.production.example)
 version: '3.8'
+
+x-logging: &default-logging
+  driver: "json-file"
+  options:
+    max-size: "20m"
+    max-file: "5"
+
 services:
   booklist:
+    restart: unless-stopped
+    # Explicitly clear command to ensure the Gunicorn entrypoint runs
+    # even if docker-compose.override.yml was merged
+    command: []
+    volumes:
+      - static:/static
+      - media_data:/media
     environment:
       # Production database settings with larger connection pool
       - DJANGO_ENV=production
       - DB_CONN_MAX_AGE=3600 # Keep connections alive for 1 hour in production
+      - DB_PASSWORD=${DB_PASSWORD:-${POSTGRES_PASSWORD:-changeme}}
       - DEBUG=False
+      - DJANGO_DEBUG=False
+      - WEB_CONCURRENCY=${WEB_CONCURRENCY:-4}
+      - WEB_TIMEOUT=${WEB_TIMEOUT:-60}
+      - STATIC_ROOT=/static
+      - MEDIA_ROOT=/media
+      - REDIS_URL=${REDIS_URL:-redis://redis:6379/1}
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 1024M
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+    logging: *default-logging
     # Add health check for production
     healthcheck:
       test: [ "CMD", "python", "manage.py", "check", "--database", "default" ]
@@ -17,12 +47,65 @@ services:
       retries: 3
       start_period: 40s
 
+  nginx:
+    restart: unless-stopped
+    volumes:
+      - static:/static
+      - media_data:/media
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 256M
+        reservations:
+          cpus: '0.25'
+          memory: 64M
+    logging: *default-logging
+
   db:
+    restart: unless-stopped
+    # Optimized PostgreSQL runtime parameters for high concurrency workload
+    command:
+      - postgres
+      - -c
+      - shared_buffers=512MB
+      - -c
+      - effective_cache_size=1536MB
+      - -c
+      - work_mem=16MB
+      - -c
+      - maintenance_work_mem=128MB
+      - -c
+      - min_wal_size=1GB
+      - -c
+      - max_wal_size=4GB
+      - -c
+      - checkpoint_completion_target=0.9
+      - -c
+      - wal_buffers=16MB
+      - -c
+      - default_statistics_target=100
+      - -c
+      - random_page_cost=1.1
+      - -c
+      - effective_io_concurrency=200
+      - -c
+      - max_connections=200
     environment:
       # Secure database setup for production - use environment variables
-      # Set POSTGRES_PASSWORD in your environment or .env.production file
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-changeme}
-      - POSTGRES_HOST_AUTH_METHOD=md5
+      # Set DB_PASSWORD or POSTGRES_PASSWORD in your environment or .env.production file
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-${POSTGRES_PASSWORD:-changeme}}
+      - POSTGRES_INITDB_ARGS=--auth-host=scram-sha-256 --auth-local=scram-sha-256
+      - POSTGRES_HOST_AUTH_METHOD=scram-sha-256
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2048M
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+    logging: *default-logging
     # Add production-optimized health check for database
     healthcheck:
       test: [ "CMD-SHELL", "pg_isready -U postgres" ]
@@ -33,7 +116,29 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
 
+  redis:
+    restart: unless-stopped
+    volumes:
+      - redis_data:/data
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 128M
+    logging: *default-logging
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
 # Production volumes configuration
 volumes:
   postgres_data:
   static:
+  media_data:
+  redis_data:

@@ -44,5 +44,7 @@ services:
     depends_on:
       db:
         condition: service_healthy
+    networks:
+      - backend_net
     profiles:
       - tools # Only starts when explicitly requested

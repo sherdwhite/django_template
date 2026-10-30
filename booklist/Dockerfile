@@ -6,6 +6,8 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONPATH=/booklist/
 ENV DJANGO_SETTINGS_MODULE=core.settings
+ENV STATIC_ROOT=/static
+ENV MEDIA_ROOT=/media
 
 # Install system dependencies in one layer
 RUN apt-get update && apt-get install -y \
@@ -25,11 +27,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application code
 COPY . .
 
-# Collect static files during build
-RUN python manage.py collectstatic --noinput
+# Pre-create static and media directories and non-root user
+RUN groupadd -r appuser && useradd -r -g appuser appuser && \
+    mkdir -p /static /media && chown -R appuser:appuser /static /media
 
-# Create non-root user for runtime security
-RUN groupadd -r appuser && useradd -r -g appuser appuser
+# Collect static files during build to /static
+RUN python manage.py collectstatic --noinput && chown -R appuser:appuser /static
 
 # Make entrypoint executable
 RUN chmod +x entrypoint.sh

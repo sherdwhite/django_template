@@ -1,5 +1,5 @@
 # BookList Docker Management
-.PHONY: help build up down restart logs shell test migrate collectstatic superuser clean health
+.PHONY: help build up down restart logs shell test migrate collectstatic superuser clean health prod-migrate
 
 # Default target
 help:
@@ -18,9 +18,10 @@ help:
 	@echo "  clean       - Clean up containers and volumes"
 	@echo ""
 	@echo "Production commands:"
-	@echo "  prod-build  - Build production images"
-	@echo "  prod-up     - Start production services"
-	@echo "  prod-down   - Stop production services"
+	@echo "  prod-build   - Build production images"
+	@echo "  prod-up      - Start production services"
+	@echo "  prod-migrate - Run database migrations in production"
+	@echo "  prod-down    - Stop production services"
 	@echo ""
 	@echo "Setup commands:"
 	@echo "  setup       - Complete project setup"
@@ -77,6 +78,9 @@ prod-build:
 
 prod-up:
 	docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+
+prod-migrate:
+	docker-compose -f docker-compose.yml -f docker-compose.prod.yml run --rm booklist python manage.py migrate
 
 prod-down:
 	docker-compose -f docker-compose.yml -f docker-compose.prod.yml down

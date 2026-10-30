@@ -38,6 +38,17 @@ api/
 3. **Future versions (when implemented):**
    - `/api/v2/books/` - Ready when you implement v2
 
+---
+
+## Gateway & Reverse Proxy Handling
+
+All API traffic passing through Nginx includes:
+- **Rate Limiting**: Protected by an `api_limit` zone in Nginx (30 requests/second with burst 20, returning HTTP `429 Too Many Requests`).
+- **Connection Reuse**: Uses HTTP/1.1 with backend keepalive pools to reduce TCP handshakes.
+- **Client IP Tracking**: Standard `X-Real-IP` and `X-Forwarded-For` proxy headers forwarded for rate limiting and DRF auditing.
+
+---
+
 ## Adding a New Version
 
 To add a new API version (e.g., v2):

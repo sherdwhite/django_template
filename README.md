@@ -139,10 +139,10 @@ See the [Environment Variables Guide](docs/ENVIRONMENT_VARIABLES.md) for detaile
 
 ## Accessing the Application
 
-Once running, the application will be available at:
-- **Web Interface**: http://localhost:8000/
-- **Admin Interface**: http://localhost:8000/admin/
-- **API Endpoints**: http://localhost:8000/api/
+Once running, the application will be available at (port 80 via Nginx):
+- **Web Interface**: http://localhost/ (or http://localhost:8000/ when running devcontainer or direct Django dev server)
+- **Admin Interface**: http://localhost/admin/ (or http://localhost:8000/admin/)
+- **API Endpoints**: http://localhost/api/ (or http://localhost:8000/api/)
 
 ## API Documentation
 
@@ -248,15 +248,24 @@ For production deployment:
    - Set `DJANGO_DEBUG=False`
    - Configure domain in `DJANGO_ALLOWED_HOSTS`
    - Set secure database credentials in `DB_PASSWORD`
+   - Configure `REDIS_URL` for caching and session management (defaults to `redis://redis:6379/1`)
    - Configure email settings for 2FA functionality
-   - Set up static file serving (CDN recommended)
+   - Set up static and media file serving (shared volume or CDN)
 
-3. Use production Docker Compose with health checks:
+3. Run migrations and start production services:
+   ```bash
+   # Run migrations as an isolated pre-deploy step:
+   make prod-migrate
+   # Or directly:
+   docker compose -f docker-compose.yml -f docker-compose.prod.yml run --rm booklist python manage.py migrate
+   ```
+
+4. Start production services with Gunicorn ASGI workers:
    ```bash
    docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
    ```
 
-4. Monitor deployment:
+5. Monitor deployment:
    ```bash
    # Check service health
    docker compose -f docker-compose.yml -f docker-compose.prod.yml ps

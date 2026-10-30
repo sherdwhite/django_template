@@ -9,19 +9,23 @@ services:
     # Development server configuration
     # Benefits: Live code editing, debugging support, VS Code integration
     ports:
-      - "8000:8000" # Django development server
+      - "${DEVCONTAINER_WEB_PORT:-8000}:8000" # Django development server
     environment:
       # Database connection for dev container
       DB_ENGINE: django.db.backends.postgresql
       DB_USER: postgres
       DB_NAME: postgres
       DB_HOST: db
+      DB_PORT: "5432"
       DB_PASSWORD: dbpassword
+      DJANGO_ENV: development
       # Python optimization for development
       PYTHONDONTWRITEBYTECODE: 1
       PYTHONUNBUFFERED: 1
       # Static files served by nginx from this shared volume
       STATIC_ROOT: /static
+      MEDIA_ROOT: /media
+      REDIS_URL: redis://redis:6379/1
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile
@@ -39,8 +43,12 @@ services:
       # Benefits: Faster container startup, preserved pip cache
       - booklist-pip-cache:/home/appuser/.cache/pip
       - static:/static
+      - media:/media
     depends_on:
-      - db
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
     networks:
       - booklist-network
 
@@ -50,9 +58,9 @@ services:
     image: postgres:17-alpine
     restart: unless-stopped
     ports:
-      # Use port 5433 to avoid conflicts with host PostgreSQL
+      # Use port 5433 (or DEVCONTAINER_DB_PORT) to avoid conflicts with host PostgreSQL
       # Benefits: Allows running both dev container and host postgres simultaneously
-      - "5433:5432"
+      - "${DEVCONTAINER_DB_PORT:-5433}:5432"
     environment:
       # Development database configuration
       # Note: Using simple password for development convenience
@@ -60,12 +68,19 @@ services:
       POSTGRES_DB: postgres
       POSTGRES_USER: postgres
       POSTGRES_HOST_AUTH_METHOD: trust
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
     volumes:
       # Persist database data across container restarts
       # Benefits: Data survives container rebuilds, faster development
       - postgres-data:/var/lib/postgresql/data
     networks:
       - booklist-network
+
   nginx:
     # Nginx reverse proxy for development
     # Benefits: Matches production setup, static file serving, load balancing testing
@@ -76,11 +91,28 @@ services:
       - booklist
       - db
     ports:
-      - "80:80" # Web server port
+      # Use port 8080 (or DEVCONTAINER_NGINX_PORT) to avoid conflicts with host web server or main docker-compose
+      - "${DEVCONTAINER_NGINX_PORT:-8080}:80" # Web server port
     volumes:
       # Access workspace for configuration changes
       - ..:/workspace:cached
       - static:/static
+      - media:/media
+    networks:
+      - booklist-network
+
+  redis:
+    # In-memory data store for caching and sessions
+    image: redis:7-alpine
+    restart: unless-stopped
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
     networks:
       - booklist-network
 
@@ -90,6 +122,10 @@ volumes:
   booklist-pip-cache: # Python package cache
   static:
     # Django static files
+  media:
+    # Django uploaded media files
+  redis-data:
+    # Redis data persistence
 
 networks:
   # Isolated network for dev container services
